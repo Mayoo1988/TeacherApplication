@@ -1,0 +1,106 @@
+﻿@model TeacherFairEntity.USER
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>USER</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.USERID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USERID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FIRSTNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FIRSTNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MIDDLENAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MIDDLENAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LASTNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LASTNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MOTHERNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MOTHERNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FATHERNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FATHERNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DISABILITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DISABILITY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ENROLNMENTID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ENROLNMENTID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GENDER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GENDER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NATIONALITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NATIONALITY)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PERSONALDETAILID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

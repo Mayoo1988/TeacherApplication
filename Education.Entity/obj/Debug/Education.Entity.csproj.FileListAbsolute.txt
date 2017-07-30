@@ -1,0 +1,10 @@
+G:\ProjectWork\MayurMane\EducationApp\EducationApp\Education.Entity\bin\Debug\Education.Entity.dll
+G:\ProjectWork\MayurMane\EducationApp\EducationApp\Education.Entity\bin\Debug\Education.Entity.pdb
+G:\ProjectWork\MayurMane\EducationApp\EducationApp\Education.Entity\obj\Debug\Education.Entity.csprojResolveAssemblyReference.cache
+G:\ProjectWork\MayurMane\EducationApp\EducationApp\Education.Entity\obj\Debug\Education.Entity.dll
+G:\ProjectWork\MayurMane\EducationApp\EducationApp\Education.Entity\obj\Debug\Education.Entity.pdb
+C:\EducationApp\EducationApp\EducationApp\Education.Entity\bin\Debug\Education.Entity.dll
+C:\EducationApp\EducationApp\EducationApp\Education.Entity\bin\Debug\Education.Entity.pdb
+C:\EducationApp\EducationApp\EducationApp\Education.Entity\obj\Debug\Education.Entity.csprojResolveAssemblyReference.cache
+C:\EducationApp\EducationApp\EducationApp\Education.Entity\obj\Debug\Education.Entity.dll
+C:\EducationApp\EducationApp\EducationApp\Education.Entity\obj\Debug\Education.Entity.pdb

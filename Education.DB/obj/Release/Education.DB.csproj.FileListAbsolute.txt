@@ -1,0 +1,10 @@
+G:\ProjectWork\MayurMane\EducationApp\EducationApp\Education.DB\bin\Release\Education.DB.dll.config
+G:\ProjectWork\MayurMane\EducationApp\EducationApp\Education.DB\bin\Release\Education.DB.dll
+G:\ProjectWork\MayurMane\EducationApp\EducationApp\Education.DB\bin\Release\Education.DB.pdb
+G:\ProjectWork\MayurMane\EducationApp\EducationApp\Education.DB\bin\Release\EntityFramework.dll
+G:\ProjectWork\MayurMane\EducationApp\EducationApp\Education.DB\bin\Release\EntityFramework.SqlServer.dll
+G:\ProjectWork\MayurMane\EducationApp\EducationApp\Education.DB\bin\Release\EntityFramework.xml
+G:\ProjectWork\MayurMane\EducationApp\EducationApp\Education.DB\bin\Release\EntityFramework.SqlServer.xml
+G:\ProjectWork\MayurMane\EducationApp\EducationApp\Education.DB\obj\Release\Education.DB.csprojResolveAssemblyReference.cache
+G:\ProjectWork\MayurMane\EducationApp\EducationApp\Education.DB\obj\Release\Education.DB.dll
+G:\ProjectWork\MayurMane\EducationApp\EducationApp\Education.DB\obj\Release\Education.DB.pdb

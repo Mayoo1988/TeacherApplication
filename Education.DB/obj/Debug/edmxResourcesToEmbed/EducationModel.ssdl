@@ -1,0 +1,884 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ajay_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBL_GN_ANNAUNCMENT">
+    <Key>
+      <PropertyRef Name="ANNAUNCMENTID" />
+    </Key>
+    <Property Name="ANNAUNCMENTID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SUMMARY" Type="nvarchar" MaxLength="100" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="2000" />
+    <Property Name="PUBLISHDATE" Type="datetime" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="CREATEDBY" Type="bigint" />
+    <Property Name="MODIFIEDBY" Type="bigint" />
+    <Property Name="MODIFIEDDATE" Type="datetime" />
+    <Property Name="STATUS" Type="bit" />
+  </EntityType>
+  <EntityType Name="TBL_GN_DIGITALDOC_DETAILS">
+    <Key>
+      <PropertyRef Name="DIGITALDOCID" />
+    </Key>
+    <Property Name="DIGITALDOCID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DIGITALDOCTYPEID" Type="int" />
+    <Property Name="DOCUMENTNAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="SUBJECTID" Type="int" />
+    <Property Name="CREATEDBY" Type="bigint" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="MODIFIEDBY" Type="bigint" />
+    <Property Name="MODIFIEDDATE" Type="datetime" />
+    <Property Name="STATUS" Type="bit" />
+    <Property Name="ALLOWANONYMOUS" Type="bit" />
+    <Property Name="DOWNLOADCOUNT" Type="int" />
+    <Property Name="VIEWCOUNT" Type="int" />
+  </EntityType>
+  <EntityType Name="TBL_GN_DIGITALDOC_VIEWDETAILS">
+    <Key>
+      <PropertyRef Name="DOCVIEWID" />
+    </Key>
+    <Property Name="DOCVIEWID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DIGITALDOCID" Type="bigint" />
+    <Property Name="VIEWBY" Type="bigint" />
+    <Property Name="DOWNLOADBY" Type="bigint" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="MODIFIEDDATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_MASTER_BOARDS">
+    <Key>
+      <PropertyRef Name="BOARDID" />
+    </Key>
+    <Property Name="BOARDID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TBL_MASTER_CITY">
+    <Key>
+      <PropertyRef Name="CITYID" />
+    </Key>
+    <Property Name="CITYID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nchar" MaxLength="10" />
+    <Property Name="STATEID" Type="int" />
+  </EntityType>
+  <EntityType Name="TBL_MASTER_CLASS">
+    <Key>
+      <PropertyRef Name="CLASSID" />
+    </Key>
+    <Property Name="CLASSID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_MASTER_COUNTRY">
+    <Key>
+      <PropertyRef Name="COUNTRYID" />
+    </Key>
+    <Property Name="COUNTRYID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBL_MASTER_COURSE">
+    <Key>
+      <PropertyRef Name="COURSEID" />
+    </Key>
+    <Property Name="COURSEID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TBL_MASTER_DIGITALDOC">
+    <Key>
+      <PropertyRef Name="DIGITALDOCTYPEID" />
+    </Key>
+    <Property Name="DIGITALDOCTYPEID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DIGITALDOCNAME" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TBL_MASTER_DOCUMENTTYPE">
+    <Key>
+      <PropertyRef Name="DocumentTypeID" />
+    </Key>
+    <Property Name="DocumentTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentTypeName" Type="nvarchar" MaxLength="70" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_MASTER_STATE">
+    <Key>
+      <PropertyRef Name="STATEID" />
+    </Key>
+    <Property Name="STATEID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="COUNTRYID" Type="int" />
+  </EntityType>
+  <EntityType Name="TBL_MASTER_STATUS">
+    <Key>
+      <PropertyRef Name="STATUSID" />
+    </Key>
+    <Property Name="STATUSID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TBL_MASTER_SUBJECT">
+    <Key>
+      <PropertyRef Name="SUBJECTID" />
+    </Key>
+    <Property Name="SUBJECTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TBL_MASTER_TESTQUESTIONTYPE">
+    <Key>
+      <PropertyRef Name="QUESTIONTYPEID" />
+    </Key>
+    <Property Name="QUESTIONTYPEID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TYPENAME" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBL_MASTER_USERTYPE">
+    <Key>
+      <PropertyRef Name="USERTYPEID" />
+    </Key>
+    <Property Name="USERTYPEID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TYPENAME" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TBL_TEST_ANSWERS">
+    <Key>
+      <PropertyRef Name="ANSWERID" />
+    </Key>
+    <Property Name="ANSWERID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="1000" />
+    <Property Name="QUESTIONID" Type="bigint" />
+    <Property Name="TESTID" Type="bigint" />
+    <Property Name="ISVALID" Type="bit" />
+  </EntityType>
+  <EntityType Name="TBL_TEST_ATAMPT">
+    <Key>
+      <PropertyRef Name="TESTATAMPTID" />
+    </Key>
+    <Property Name="TESTATAMPTID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TESTID" Type="bigint" />
+    <Property Name="USERID" Type="bigint" />
+    <Property Name="STARTDATETIME" Type="datetime" />
+    <Property Name="ENDDATETIME" Type="datetime" />
+    <Property Name="TOTALMARKS" Type="int" />
+  </EntityType>
+  <EntityType Name="TBL_TEST_ATAMPT_QUESTION_ANSWER">
+    <Key>
+      <PropertyRef Name="ATAMPTTESTANSWERID" />
+    </Key>
+    <Property Name="ATAMPTTESTANSWERID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QUESTIONID" Type="bigint" />
+    <Property Name="ANSWERID" Type="bigint" />
+    <Property Name="TESTID" Type="bigint" />
+    <Property Name="REMARKS" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="TBL_TEST_QUESTIONS">
+    <Key>
+      <PropertyRef Name="QUESTIONID" />
+    </Key>
+    <Property Name="QUESTIONID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ISMULTISELECT" Type="bit" Nullable="false" />
+    <Property Name="TESTID" Type="bigint" Nullable="false" />
+    <Property Name="QUESTIONTYPEID" Type="int" Nullable="false" />
+    <Property Name="MARKS" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_TEST_TESTDETAIL">
+    <Key>
+      <PropertyRef Name="TESTID" />
+    </Key>
+    <Property Name="TESTID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TITLE" Type="nvarchar" MaxLength="100" />
+    <Property Name="SUBJECTID" Type="int" />
+    <Property Name="PUBLISHDATE" Type="datetime" />
+    <Property Name="STATUS" Type="bit" />
+    <Property Name="GIVENBY" Type="bigint" />
+    <Property Name="CREATEDBY" Type="bigint" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="MODIFIEDBY" Type="bigint" />
+    <Property Name="MODIFIEDDATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_USER_ADDRESS_DETAILS">
+    <Key>
+      <PropertyRef Name="ADDRESSDETAILID" />
+    </Key>
+    <Property Name="ADDRESSDETAILID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERID" Type="bigint" Nullable="false" />
+    <Property Name="ADDRESSTYPEID" Type="int" Nullable="false" />
+    <Property Name="ADDRESSLINE1" Type="nvarchar" MaxLength="100" />
+    <Property Name="ADDRESSLINE2" Type="nvarchar" MaxLength="100" />
+    <Property Name="CITY" Type="int" />
+    <Property Name="STATE" Type="int" />
+    <Property Name="COUNTRY" Type="int" />
+    <Property Name="PINCODE" Type="nvarchar" MaxLength="10" />
+    <Property Name="STATUS" Type="bit" />
+    <Property Name="CREATEDBY" Type="bigint" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="MODIFIEDDATE" Type="datetime" />
+    <Property Name="MODIFIEDBY" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_USER_COURSE_DETAILS">
+    <Key>
+      <PropertyRef Name="STUDENTCOURSEID" />
+    </Key>
+    <Property Name="STUDENTCOURSEID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERID" Type="bigint" />
+    <Property Name="COURSEID" Type="int" />
+    <Property Name="JOINDATE" Type="datetime" />
+    <Property Name="COMPLETEDATE" Type="datetime" />
+    <Property Name="CREATEDBY" Type="bigint" />
+    <Property Name="MODIFIEDBY" Type="bigint" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="MODIFIEDDATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_USER_DETAILS">
+    <Key>
+      <PropertyRef Name="PERSONALDETAILID" />
+    </Key>
+    <Property Name="PERSONALDETAILID" Type="bigint" Nullable="false" />
+    <Property Name="USERID" Type="bigint" Nullable="false" />
+    <Property Name="FIRSTNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="MIDDLENAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="LASTNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="MOTHERNAME" Type="nvarchar" MaxLength="150" />
+    <Property Name="FATHERNAME" Type="nvarchar" MaxLength="150" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="DISABILITY" Type="nvarchar" MaxLength="100" />
+    <Property Name="ENROLNMENTID" Type="nvarchar" MaxLength="20" />
+    <Property Name="GENDER" Type="nvarchar" MaxLength="10" />
+    <Property Name="NATIONALITY" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBL_USER_DOCUMENTS_DETAILS">
+    <Key>
+      <PropertyRef Name="USERDOCUMENTID" />
+    </Key>
+    <Property Name="USERDOCUMENTID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DOCUMENTTYPEID" Type="int" />
+    <Property Name="DOCUMENTNAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="USERID" Type="bigint" Nullable="false" />
+    <Property Name="STATUS" Type="bit" />
+    <Property Name="CREATEDBY" Type="bigint" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="MODIFIEDBY" Type="bigint" />
+    <Property Name="MODIFIEDDATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_USER_INSTITUTION_DETAILS">
+    <Key>
+      <PropertyRef Name="INSTITUTIONID" />
+    </Key>
+    <Property Name="INSTITUTIONID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="INSTITUTIONNAME" Type="nvarchar" MaxLength="1000" />
+    <Property Name="USERID" Type="bigint" />
+    <Property Name="CLASSID" Type="int" />
+    <Property Name="BOARDID" Type="int" Nullable="false" />
+    <Property Name="PASSINGYEAR" Type="int" />
+    <Property Name="GRADE_PERCENT" Type="nvarchar" MaxLength="10" />
+    <Property Name="CREATEDBY" Type="bigint" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="MODIFIEDBY" Type="bigint" />
+    <Property Name="MODIFIEDDATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_USER_LOGIN">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="USERID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LOGIN_EMAIL" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="LOGIN_MOBILE" Type="nvarchar" MaxLength="10" />
+    <Property Name="PASSWORD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="STATUSID" Type="int" Nullable="false" />
+    <Property Name="USERTYPEID" Type="int" Nullable="false" />
+    <Property Name="PASSWORDRETRYCOUNT" Type="int" Nullable="false" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="MODIFIEDDATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_USER_LOGIN_TRAIL">
+    <Key>
+      <PropertyRef Name="LOGIN_TRAIL_ID" />
+    </Key>
+    <Property Name="LOGIN_TRAIL_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERID" Type="bigint" Nullable="false" />
+    <Property Name="IPADDRESS" Type="nvarchar" MaxLength="15" />
+    <Property Name="LATITUTE" Type="nvarchar" MaxLength="50" />
+    <Property Name="LONGITUTE" Type="nvarchar" MaxLength="50" />
+    <Property Name="LOGINDATETIME" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_USER_PARENTS_DETAILS">
+    <Key>
+      <PropertyRef Name="PARENTID" />
+    </Key>
+    <Property Name="PARENTID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERID" Type="bigint" />
+    <Property Name="FATHERNAME" Type="nvarchar" MaxLength="150" />
+    <Property Name="FATHEREMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="FATHERMOBILENUMBER" Type="nchar" MaxLength="10" />
+    <Property Name="FATHEROCCUPATION" Type="nvarchar" MaxLength="100" />
+    <Property Name="FATHERCOMPANYNAME" Type="nvarchar" MaxLength="200" />
+    <Property Name="FATHERDESIGNATION" Type="nvarchar" MaxLength="50" />
+    <Property Name="MOTHERNAME" Type="nvarchar" MaxLength="150" />
+    <Property Name="MOTHEREMAIL" Type="nchar" MaxLength="10" />
+    <Property Name="MOTHERMOBILENUMBER" Type="nvarchar" MaxLength="10" />
+    <Property Name="MOTHEROCCUPATION" Type="nvarchar" MaxLength="100" />
+    <Property Name="MOTHERCOMPANYNAME" Type="nvarchar" MaxLength="200" />
+    <Property Name="MOTHERDESIGNATION" Type="nvarchar" MaxLength="50" />
+    <Property Name="CREATEDBY" Type="bigint" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="MODIFIEDBY" Type="bigint" />
+    <Property Name="MODIFIEDDATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_USER_PROFESSIONAL_DETAILS">
+    <Key>
+      <PropertyRef Name="PROFESSIONALDETAILID" />
+    </Key>
+    <Property Name="PROFESSIONALDETAILID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERID" Type="bigint" />
+    <Property Name="COMPANYNAME" Type="nvarchar" MaxLength="200" />
+    <Property Name="DESIGNATION" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMPLOYEETYPE" Type="nvarchar" MaxLength="10" />
+    <Property Name="REMARKS" Type="nvarchar" MaxLength="100" />
+    <Property Name="CREATEBY" Type="bigint" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="MODIFIEDDBY" Type="bigint" />
+    <Property Name="MODIFIEDDATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_USER_ROLE">
+    <Key>
+      <PropertyRef Name="ROLE_ID" />
+    </Key>
+    <Property Name="ROLE_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERTYPEID" Type="int" />
+    <Property Name="USERID" Type="bigint" />
+    <Property Name="CREATEDBY" Type="bigint" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="MODIFIEDBY" Type="bigint" />
+    <Property Name="MODIFIEDDATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_USER_SUBJECTS">
+    <Key>
+      <PropertyRef Name="USERSUBJECTID" />
+    </Key>
+    <Property Name="USERSUBJECTID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SUBJECTID" Type="int" />
+    <Property Name="USERID" Type="bigint" />
+    <Property Name="CREATEDBY" Type="bigint" />
+    <Property Name="CREATEDDATE" Type="datetime" />
+    <Property Name="MODIFIEDBY" Type="bigint" />
+    <Property Name="MODIFIEDDATE" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_Table_1_TBL_TEST_TESTDETAIL">
+    <End Role="TBL_TEST_TESTDETAIL" Type="Self.TBL_TEST_TESTDETAIL" Multiplicity="1" />
+    <End Role="TBL_TEST_QUESTIONS" Type="Self.TBL_TEST_QUESTIONS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_TEST_TESTDETAIL">
+        <PropertyRef Name="TESTID" />
+      </Principal>
+      <Dependent Role="TBL_TEST_QUESTIONS">
+        <PropertyRef Name="TESTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_GN_DIGITALDOC_DETAILS_TBL_MASTER_SUBJECT">
+    <End Role="TBL_MASTER_SUBJECT" Type="Self.TBL_MASTER_SUBJECT" Multiplicity="0..1" />
+    <End Role="TBL_GN_DIGITALDOC_DETAILS" Type="Self.TBL_GN_DIGITALDOC_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_MASTER_SUBJECT">
+        <PropertyRef Name="SUBJECTID" />
+      </Principal>
+      <Dependent Role="TBL_GN_DIGITALDOC_DETAILS">
+        <PropertyRef Name="SUBJECTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_GN_DIGITALDOC_VIEWDETAILS_TBL_GN_DIGITALDOC_DETAILS">
+    <End Role="TBL_GN_DIGITALDOC_DETAILS" Type="Self.TBL_GN_DIGITALDOC_DETAILS" Multiplicity="0..1" />
+    <End Role="TBL_GN_DIGITALDOC_VIEWDETAILS" Type="Self.TBL_GN_DIGITALDOC_VIEWDETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_GN_DIGITALDOC_DETAILS">
+        <PropertyRef Name="DIGITALDOCID" />
+      </Principal>
+      <Dependent Role="TBL_GN_DIGITALDOC_VIEWDETAILS">
+        <PropertyRef Name="DIGITALDOCID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_MASTER_CITY_TBL_MASTER_STATE">
+    <End Role="TBL_MASTER_STATE" Type="Self.TBL_MASTER_STATE" Multiplicity="0..1" />
+    <End Role="TBL_MASTER_CITY" Type="Self.TBL_MASTER_CITY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_MASTER_STATE">
+        <PropertyRef Name="STATEID" />
+      </Principal>
+      <Dependent Role="TBL_MASTER_CITY">
+        <PropertyRef Name="STATEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_MASTER_STATE_TBL_MASTER_COUNTRY">
+    <End Role="TBL_MASTER_COUNTRY" Type="Self.TBL_MASTER_COUNTRY" Multiplicity="0..1" />
+    <End Role="TBL_MASTER_STATE" Type="Self.TBL_MASTER_STATE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_MASTER_COUNTRY">
+        <PropertyRef Name="COUNTRYID" />
+      </Principal>
+      <Dependent Role="TBL_MASTER_STATE">
+        <PropertyRef Name="COUNTRYID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_TEST_ANSWERS_TBL_TEST_QUESTIONS">
+    <End Role="TBL_TEST_QUESTIONS" Type="Self.TBL_TEST_QUESTIONS" Multiplicity="0..1" />
+    <End Role="TBL_TEST_ANSWERS" Type="Self.TBL_TEST_ANSWERS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_TEST_QUESTIONS">
+        <PropertyRef Name="QUESTIONID" />
+      </Principal>
+      <Dependent Role="TBL_TEST_ANSWERS">
+        <PropertyRef Name="QUESTIONID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_TEST_ANSWERS_TBL_TEST_TESTDETAIL">
+    <End Role="TBL_TEST_TESTDETAIL" Type="Self.TBL_TEST_TESTDETAIL" Multiplicity="0..1" />
+    <End Role="TBL_TEST_ANSWERS" Type="Self.TBL_TEST_ANSWERS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_TEST_TESTDETAIL">
+        <PropertyRef Name="TESTID" />
+      </Principal>
+      <Dependent Role="TBL_TEST_ANSWERS">
+        <PropertyRef Name="TESTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_TEST_ATAMPT_QUESTION_ANSWER_TBL_TEST_QUESTIONS">
+    <End Role="TBL_TEST_QUESTIONS" Type="Self.TBL_TEST_QUESTIONS" Multiplicity="0..1" />
+    <End Role="TBL_TEST_ATAMPT_QUESTION_ANSWER" Type="Self.TBL_TEST_ATAMPT_QUESTION_ANSWER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_TEST_QUESTIONS">
+        <PropertyRef Name="QUESTIONID" />
+      </Principal>
+      <Dependent Role="TBL_TEST_ATAMPT_QUESTION_ANSWER">
+        <PropertyRef Name="QUESTIONID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_TEST_ATAMPT_QUESTION_ANSWER_TBL_TEST_TESTDETAIL">
+    <End Role="TBL_TEST_TESTDETAIL" Type="Self.TBL_TEST_TESTDETAIL" Multiplicity="0..1" />
+    <End Role="TBL_TEST_ATAMPT_QUESTION_ANSWER" Type="Self.TBL_TEST_ATAMPT_QUESTION_ANSWER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_TEST_TESTDETAIL">
+        <PropertyRef Name="TESTID" />
+      </Principal>
+      <Dependent Role="TBL_TEST_ATAMPT_QUESTION_ANSWER">
+        <PropertyRef Name="TESTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_TEST_ATAMPT_TBL_TEST_TESTDETAIL">
+    <End Role="TBL_TEST_TESTDETAIL" Type="Self.TBL_TEST_TESTDETAIL" Multiplicity="0..1" />
+    <End Role="TBL_TEST_ATAMPT" Type="Self.TBL_TEST_ATAMPT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_TEST_TESTDETAIL">
+        <PropertyRef Name="TESTID" />
+      </Principal>
+      <Dependent Role="TBL_TEST_ATAMPT">
+        <PropertyRef Name="TESTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_TEST_ATAMPT_TBL_USER_LOGIN">
+    <End Role="TBL_USER_LOGIN" Type="Self.TBL_USER_LOGIN" Multiplicity="0..1" />
+    <End Role="TBL_TEST_ATAMPT" Type="Self.TBL_TEST_ATAMPT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_USER_LOGIN">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="TBL_TEST_ATAMPT">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_TEST_QUESTIONS_TBL_MASTER_TESTQUESTIONTYPE">
+    <End Role="TBL_MASTER_TESTQUESTIONTYPE" Type="Self.TBL_MASTER_TESTQUESTIONTYPE" Multiplicity="1" />
+    <End Role="TBL_TEST_QUESTIONS" Type="Self.TBL_TEST_QUESTIONS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_MASTER_TESTQUESTIONTYPE">
+        <PropertyRef Name="QUESTIONTYPEID" />
+      </Principal>
+      <Dependent Role="TBL_TEST_QUESTIONS">
+        <PropertyRef Name="QUESTIONTYPEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_TEST_TESTDETAIL_TBL_MASTER_SUBJECT">
+    <End Role="TBL_MASTER_SUBJECT" Type="Self.TBL_MASTER_SUBJECT" Multiplicity="0..1" />
+    <End Role="TBL_TEST_TESTDETAIL" Type="Self.TBL_TEST_TESTDETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_MASTER_SUBJECT">
+        <PropertyRef Name="SUBJECTID" />
+      </Principal>
+      <Dependent Role="TBL_TEST_TESTDETAIL">
+        <PropertyRef Name="SUBJECTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_ADDRESS_DETAILS_TBL_USER_LOGIN">
+    <End Role="TBL_USER_LOGIN" Type="Self.TBL_USER_LOGIN" Multiplicity="1" />
+    <End Role="TBL_USER_ADDRESS_DETAILS" Type="Self.TBL_USER_ADDRESS_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_USER_LOGIN">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="TBL_USER_ADDRESS_DETAILS">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_COURSE_DETAILS_TBL_MASTER_COURSE">
+    <End Role="TBL_MASTER_COURSE" Type="Self.TBL_MASTER_COURSE" Multiplicity="0..1" />
+    <End Role="TBL_USER_COURSE_DETAILS" Type="Self.TBL_USER_COURSE_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_MASTER_COURSE">
+        <PropertyRef Name="COURSEID" />
+      </Principal>
+      <Dependent Role="TBL_USER_COURSE_DETAILS">
+        <PropertyRef Name="COURSEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_COURSE_DETAILS_TBL_USER_LOGIN">
+    <End Role="TBL_USER_LOGIN" Type="Self.TBL_USER_LOGIN" Multiplicity="0..1" />
+    <End Role="TBL_USER_COURSE_DETAILS" Type="Self.TBL_USER_COURSE_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_USER_LOGIN">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="TBL_USER_COURSE_DETAILS">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_DETAILS_TBL_USER_DETAILS">
+    <End Role="TBL_USER_LOGIN" Type="Self.TBL_USER_LOGIN" Multiplicity="1" />
+    <End Role="TBL_USER_DETAILS" Type="Self.TBL_USER_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_USER_LOGIN">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="TBL_USER_DETAILS">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_DOCUMENTS_DETAILS_TBL_MASTER_DOCUMENTTYPE">
+    <End Role="TBL_MASTER_DOCUMENTTYPE" Type="Self.TBL_MASTER_DOCUMENTTYPE" Multiplicity="0..1" />
+    <End Role="TBL_USER_DOCUMENTS_DETAILS" Type="Self.TBL_USER_DOCUMENTS_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_MASTER_DOCUMENTTYPE">
+        <PropertyRef Name="DocumentTypeID" />
+      </Principal>
+      <Dependent Role="TBL_USER_DOCUMENTS_DETAILS">
+        <PropertyRef Name="DOCUMENTTYPEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_DOCUMENTS_DETAILS_TBL_USER_LOGIN">
+    <End Role="TBL_USER_LOGIN" Type="Self.TBL_USER_LOGIN" Multiplicity="1" />
+    <End Role="TBL_USER_DOCUMENTS_DETAILS" Type="Self.TBL_USER_DOCUMENTS_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_USER_LOGIN">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="TBL_USER_DOCUMENTS_DETAILS">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_INSTITUTION_DETAILS_TBL_MASTER_BOARDS">
+    <End Role="TBL_MASTER_BOARDS" Type="Self.TBL_MASTER_BOARDS" Multiplicity="1" />
+    <End Role="TBL_USER_INSTITUTION_DETAILS" Type="Self.TBL_USER_INSTITUTION_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_MASTER_BOARDS">
+        <PropertyRef Name="BOARDID" />
+      </Principal>
+      <Dependent Role="TBL_USER_INSTITUTION_DETAILS">
+        <PropertyRef Name="BOARDID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_INSTITUTION_DETAILS_TBL_MASTER_CLASS">
+    <End Role="TBL_MASTER_CLASS" Type="Self.TBL_MASTER_CLASS" Multiplicity="0..1" />
+    <End Role="TBL_USER_INSTITUTION_DETAILS" Type="Self.TBL_USER_INSTITUTION_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_MASTER_CLASS">
+        <PropertyRef Name="CLASSID" />
+      </Principal>
+      <Dependent Role="TBL_USER_INSTITUTION_DETAILS">
+        <PropertyRef Name="CLASSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_INSTITUTION_DETAILS_TBL_USER_LOGIN">
+    <End Role="TBL_USER_LOGIN" Type="Self.TBL_USER_LOGIN" Multiplicity="0..1" />
+    <End Role="TBL_USER_INSTITUTION_DETAILS" Type="Self.TBL_USER_INSTITUTION_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_USER_LOGIN">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="TBL_USER_INSTITUTION_DETAILS">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_LOGIN_TBL_MASTER_STATUS">
+    <End Role="TBL_MASTER_STATUS" Type="Self.TBL_MASTER_STATUS" Multiplicity="1" />
+    <End Role="TBL_USER_LOGIN" Type="Self.TBL_USER_LOGIN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_MASTER_STATUS">
+        <PropertyRef Name="STATUSID" />
+      </Principal>
+      <Dependent Role="TBL_USER_LOGIN">
+        <PropertyRef Name="STATUSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_LOGIN_TBL_MASTER_USERTYPE">
+    <End Role="TBL_MASTER_USERTYPE" Type="Self.TBL_MASTER_USERTYPE" Multiplicity="1" />
+    <End Role="TBL_USER_LOGIN" Type="Self.TBL_USER_LOGIN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_MASTER_USERTYPE">
+        <PropertyRef Name="USERTYPEID" />
+      </Principal>
+      <Dependent Role="TBL_USER_LOGIN">
+        <PropertyRef Name="USERTYPEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_LOGIN_TRAIL_TBL_USER_LOGIN">
+    <End Role="TBL_USER_LOGIN" Type="Self.TBL_USER_LOGIN" Multiplicity="1" />
+    <End Role="TBL_USER_LOGIN_TRAIL" Type="Self.TBL_USER_LOGIN_TRAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_USER_LOGIN">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="TBL_USER_LOGIN_TRAIL">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_PARENTS_DETAILS_TBL_USER_LOGIN">
+    <End Role="TBL_USER_LOGIN" Type="Self.TBL_USER_LOGIN" Multiplicity="0..1" />
+    <End Role="TBL_USER_PARENTS_DETAILS" Type="Self.TBL_USER_PARENTS_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_USER_LOGIN">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="TBL_USER_PARENTS_DETAILS">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_PROFESSIONAL_DETAILS_TBL_USER_LOGIN">
+    <End Role="TBL_USER_LOGIN" Type="Self.TBL_USER_LOGIN" Multiplicity="0..1" />
+    <End Role="TBL_USER_PROFESSIONAL_DETAILS" Type="Self.TBL_USER_PROFESSIONAL_DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_USER_LOGIN">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="TBL_USER_PROFESSIONAL_DETAILS">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_ROLE_TBL_MASTER_USERTYPE">
+    <End Role="TBL_MASTER_USERTYPE" Type="Self.TBL_MASTER_USERTYPE" Multiplicity="0..1" />
+    <End Role="TBL_USER_ROLE" Type="Self.TBL_USER_ROLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_MASTER_USERTYPE">
+        <PropertyRef Name="USERTYPEID" />
+      </Principal>
+      <Dependent Role="TBL_USER_ROLE">
+        <PropertyRef Name="USERTYPEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_ROLE_TBL_USER_LOGIN">
+    <End Role="TBL_USER_LOGIN" Type="Self.TBL_USER_LOGIN" Multiplicity="0..1" />
+    <End Role="TBL_USER_ROLE" Type="Self.TBL_USER_ROLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_USER_LOGIN">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="TBL_USER_ROLE">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_SUBJECTS_TBL_MASTER_SUBJECT">
+    <End Role="TBL_MASTER_SUBJECT" Type="Self.TBL_MASTER_SUBJECT" Multiplicity="0..1" />
+    <End Role="TBL_USER_SUBJECTS" Type="Self.TBL_USER_SUBJECTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_MASTER_SUBJECT">
+        <PropertyRef Name="SUBJECTID" />
+      </Principal>
+      <Dependent Role="TBL_USER_SUBJECTS">
+        <PropertyRef Name="SUBJECTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USER_SUBJECTS_TBL_USER_LOGIN">
+    <End Role="TBL_USER_LOGIN" Type="Self.TBL_USER_LOGIN" Multiplicity="0..1" />
+    <End Role="TBL_USER_SUBJECTS" Type="Self.TBL_USER_SUBJECTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_USER_LOGIN">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="TBL_USER_SUBJECTS">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ajay_dbModelStoreContainer">
+    <EntitySet Name="TBL_GN_ANNAUNCMENT" EntityType="Self.TBL_GN_ANNAUNCMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_GN_DIGITALDOC_DETAILS" EntityType="Self.TBL_GN_DIGITALDOC_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_GN_DIGITALDOC_VIEWDETAILS" EntityType="Self.TBL_GN_DIGITALDOC_VIEWDETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_MASTER_BOARDS" EntityType="Self.TBL_MASTER_BOARDS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_MASTER_CITY" EntityType="Self.TBL_MASTER_CITY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_MASTER_CLASS" EntityType="Self.TBL_MASTER_CLASS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_MASTER_COUNTRY" EntityType="Self.TBL_MASTER_COUNTRY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_MASTER_COURSE" EntityType="Self.TBL_MASTER_COURSE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_MASTER_DIGITALDOC" EntityType="Self.TBL_MASTER_DIGITALDOC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_MASTER_DOCUMENTTYPE" EntityType="Self.TBL_MASTER_DOCUMENTTYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_MASTER_STATE" EntityType="Self.TBL_MASTER_STATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_MASTER_STATUS" EntityType="Self.TBL_MASTER_STATUS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_MASTER_SUBJECT" EntityType="Self.TBL_MASTER_SUBJECT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_MASTER_TESTQUESTIONTYPE" EntityType="Self.TBL_MASTER_TESTQUESTIONTYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_MASTER_USERTYPE" EntityType="Self.TBL_MASTER_USERTYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_TEST_ANSWERS" EntityType="Self.TBL_TEST_ANSWERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_TEST_ATAMPT" EntityType="Self.TBL_TEST_ATAMPT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_TEST_ATAMPT_QUESTION_ANSWER" EntityType="Self.TBL_TEST_ATAMPT_QUESTION_ANSWER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_TEST_QUESTIONS" EntityType="Self.TBL_TEST_QUESTIONS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_TEST_TESTDETAIL" EntityType="Self.TBL_TEST_TESTDETAIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_USER_ADDRESS_DETAILS" EntityType="Self.TBL_USER_ADDRESS_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_USER_COURSE_DETAILS" EntityType="Self.TBL_USER_COURSE_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_USER_DETAILS" EntityType="Self.TBL_USER_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_USER_DOCUMENTS_DETAILS" EntityType="Self.TBL_USER_DOCUMENTS_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_USER_INSTITUTION_DETAILS" EntityType="Self.TBL_USER_INSTITUTION_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_USER_LOGIN" EntityType="Self.TBL_USER_LOGIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_USER_LOGIN_TRAIL" EntityType="Self.TBL_USER_LOGIN_TRAIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_USER_PARENTS_DETAILS" EntityType="Self.TBL_USER_PARENTS_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_USER_PROFESSIONAL_DETAILS" EntityType="Self.TBL_USER_PROFESSIONAL_DETAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_USER_ROLE" EntityType="Self.TBL_USER_ROLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_USER_SUBJECTS" EntityType="Self.TBL_USER_SUBJECTS" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Table_1_TBL_TEST_TESTDETAIL" Association="Self.FK_Table_1_TBL_TEST_TESTDETAIL">
+      <End Role="TBL_TEST_TESTDETAIL" EntitySet="TBL_TEST_TESTDETAIL" />
+      <End Role="TBL_TEST_QUESTIONS" EntitySet="TBL_TEST_QUESTIONS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_GN_DIGITALDOC_DETAILS_TBL_MASTER_SUBJECT" Association="Self.FK_TBL_GN_DIGITALDOC_DETAILS_TBL_MASTER_SUBJECT">
+      <End Role="TBL_MASTER_SUBJECT" EntitySet="TBL_MASTER_SUBJECT" />
+      <End Role="TBL_GN_DIGITALDOC_DETAILS" EntitySet="TBL_GN_DIGITALDOC_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_GN_DIGITALDOC_VIEWDETAILS_TBL_GN_DIGITALDOC_DETAILS" Association="Self.FK_TBL_GN_DIGITALDOC_VIEWDETAILS_TBL_GN_DIGITALDOC_DETAILS">
+      <End Role="TBL_GN_DIGITALDOC_DETAILS" EntitySet="TBL_GN_DIGITALDOC_DETAILS" />
+      <End Role="TBL_GN_DIGITALDOC_VIEWDETAILS" EntitySet="TBL_GN_DIGITALDOC_VIEWDETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_MASTER_CITY_TBL_MASTER_STATE" Association="Self.FK_TBL_MASTER_CITY_TBL_MASTER_STATE">
+      <End Role="TBL_MASTER_STATE" EntitySet="TBL_MASTER_STATE" />
+      <End Role="TBL_MASTER_CITY" EntitySet="TBL_MASTER_CITY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_MASTER_STATE_TBL_MASTER_COUNTRY" Association="Self.FK_TBL_MASTER_STATE_TBL_MASTER_COUNTRY">
+      <End Role="TBL_MASTER_COUNTRY" EntitySet="TBL_MASTER_COUNTRY" />
+      <End Role="TBL_MASTER_STATE" EntitySet="TBL_MASTER_STATE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_TEST_ANSWERS_TBL_TEST_QUESTIONS" Association="Self.FK_TBL_TEST_ANSWERS_TBL_TEST_QUESTIONS">
+      <End Role="TBL_TEST_QUESTIONS" EntitySet="TBL_TEST_QUESTIONS" />
+      <End Role="TBL_TEST_ANSWERS" EntitySet="TBL_TEST_ANSWERS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_TEST_ANSWERS_TBL_TEST_TESTDETAIL" Association="Self.FK_TBL_TEST_ANSWERS_TBL_TEST_TESTDETAIL">
+      <End Role="TBL_TEST_TESTDETAIL" EntitySet="TBL_TEST_TESTDETAIL" />
+      <End Role="TBL_TEST_ANSWERS" EntitySet="TBL_TEST_ANSWERS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_TEST_ATAMPT_QUESTION_ANSWER_TBL_TEST_QUESTIONS" Association="Self.FK_TBL_TEST_ATAMPT_QUESTION_ANSWER_TBL_TEST_QUESTIONS">
+      <End Role="TBL_TEST_QUESTIONS" EntitySet="TBL_TEST_QUESTIONS" />
+      <End Role="TBL_TEST_ATAMPT_QUESTION_ANSWER" EntitySet="TBL_TEST_ATAMPT_QUESTION_ANSWER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_TEST_ATAMPT_QUESTION_ANSWER_TBL_TEST_TESTDETAIL" Association="Self.FK_TBL_TEST_ATAMPT_QUESTION_ANSWER_TBL_TEST_TESTDETAIL">
+      <End Role="TBL_TEST_TESTDETAIL" EntitySet="TBL_TEST_TESTDETAIL" />
+      <End Role="TBL_TEST_ATAMPT_QUESTION_ANSWER" EntitySet="TBL_TEST_ATAMPT_QUESTION_ANSWER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_TEST_ATAMPT_TBL_TEST_TESTDETAIL" Association="Self.FK_TBL_TEST_ATAMPT_TBL_TEST_TESTDETAIL">
+      <End Role="TBL_TEST_TESTDETAIL" EntitySet="TBL_TEST_TESTDETAIL" />
+      <End Role="TBL_TEST_ATAMPT" EntitySet="TBL_TEST_ATAMPT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_TEST_ATAMPT_TBL_USER_LOGIN" Association="Self.FK_TBL_TEST_ATAMPT_TBL_USER_LOGIN">
+      <End Role="TBL_USER_LOGIN" EntitySet="TBL_USER_LOGIN" />
+      <End Role="TBL_TEST_ATAMPT" EntitySet="TBL_TEST_ATAMPT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_TEST_QUESTIONS_TBL_MASTER_TESTQUESTIONTYPE" Association="Self.FK_TBL_TEST_QUESTIONS_TBL_MASTER_TESTQUESTIONTYPE">
+      <End Role="TBL_MASTER_TESTQUESTIONTYPE" EntitySet="TBL_MASTER_TESTQUESTIONTYPE" />
+      <End Role="TBL_TEST_QUESTIONS" EntitySet="TBL_TEST_QUESTIONS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_TEST_TESTDETAIL_TBL_MASTER_SUBJECT" Association="Self.FK_TBL_TEST_TESTDETAIL_TBL_MASTER_SUBJECT">
+      <End Role="TBL_MASTER_SUBJECT" EntitySet="TBL_MASTER_SUBJECT" />
+      <End Role="TBL_TEST_TESTDETAIL" EntitySet="TBL_TEST_TESTDETAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_ADDRESS_DETAILS_TBL_USER_LOGIN" Association="Self.FK_TBL_USER_ADDRESS_DETAILS_TBL_USER_LOGIN">
+      <End Role="TBL_USER_LOGIN" EntitySet="TBL_USER_LOGIN" />
+      <End Role="TBL_USER_ADDRESS_DETAILS" EntitySet="TBL_USER_ADDRESS_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_COURSE_DETAILS_TBL_MASTER_COURSE" Association="Self.FK_TBL_USER_COURSE_DETAILS_TBL_MASTER_COURSE">
+      <End Role="TBL_MASTER_COURSE" EntitySet="TBL_MASTER_COURSE" />
+      <End Role="TBL_USER_COURSE_DETAILS" EntitySet="TBL_USER_COURSE_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_COURSE_DETAILS_TBL_USER_LOGIN" Association="Self.FK_TBL_USER_COURSE_DETAILS_TBL_USER_LOGIN">
+      <End Role="TBL_USER_LOGIN" EntitySet="TBL_USER_LOGIN" />
+      <End Role="TBL_USER_COURSE_DETAILS" EntitySet="TBL_USER_COURSE_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_DETAILS_TBL_USER_DETAILS" Association="Self.FK_TBL_USER_DETAILS_TBL_USER_DETAILS">
+      <End Role="TBL_USER_LOGIN" EntitySet="TBL_USER_LOGIN" />
+      <End Role="TBL_USER_DETAILS" EntitySet="TBL_USER_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_DOCUMENTS_DETAILS_TBL_MASTER_DOCUMENTTYPE" Association="Self.FK_TBL_USER_DOCUMENTS_DETAILS_TBL_MASTER_DOCUMENTTYPE">
+      <End Role="TBL_MASTER_DOCUMENTTYPE" EntitySet="TBL_MASTER_DOCUMENTTYPE" />
+      <End Role="TBL_USER_DOCUMENTS_DETAILS" EntitySet="TBL_USER_DOCUMENTS_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_DOCUMENTS_DETAILS_TBL_USER_LOGIN" Association="Self.FK_TBL_USER_DOCUMENTS_DETAILS_TBL_USER_LOGIN">
+      <End Role="TBL_USER_LOGIN" EntitySet="TBL_USER_LOGIN" />
+      <End Role="TBL_USER_DOCUMENTS_DETAILS" EntitySet="TBL_USER_DOCUMENTS_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_INSTITUTION_DETAILS_TBL_MASTER_BOARDS" Association="Self.FK_TBL_USER_INSTITUTION_DETAILS_TBL_MASTER_BOARDS">
+      <End Role="TBL_MASTER_BOARDS" EntitySet="TBL_MASTER_BOARDS" />
+      <End Role="TBL_USER_INSTITUTION_DETAILS" EntitySet="TBL_USER_INSTITUTION_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_INSTITUTION_DETAILS_TBL_MASTER_CLASS" Association="Self.FK_TBL_USER_INSTITUTION_DETAILS_TBL_MASTER_CLASS">
+      <End Role="TBL_MASTER_CLASS" EntitySet="TBL_MASTER_CLASS" />
+      <End Role="TBL_USER_INSTITUTION_DETAILS" EntitySet="TBL_USER_INSTITUTION_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_INSTITUTION_DETAILS_TBL_USER_LOGIN" Association="Self.FK_TBL_USER_INSTITUTION_DETAILS_TBL_USER_LOGIN">
+      <End Role="TBL_USER_LOGIN" EntitySet="TBL_USER_LOGIN" />
+      <End Role="TBL_USER_INSTITUTION_DETAILS" EntitySet="TBL_USER_INSTITUTION_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_LOGIN_TBL_MASTER_STATUS" Association="Self.FK_TBL_USER_LOGIN_TBL_MASTER_STATUS">
+      <End Role="TBL_MASTER_STATUS" EntitySet="TBL_MASTER_STATUS" />
+      <End Role="TBL_USER_LOGIN" EntitySet="TBL_USER_LOGIN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_LOGIN_TBL_MASTER_USERTYPE" Association="Self.FK_TBL_USER_LOGIN_TBL_MASTER_USERTYPE">
+      <End Role="TBL_MASTER_USERTYPE" EntitySet="TBL_MASTER_USERTYPE" />
+      <End Role="TBL_USER_LOGIN" EntitySet="TBL_USER_LOGIN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_LOGIN_TRAIL_TBL_USER_LOGIN" Association="Self.FK_TBL_USER_LOGIN_TRAIL_TBL_USER_LOGIN">
+      <End Role="TBL_USER_LOGIN" EntitySet="TBL_USER_LOGIN" />
+      <End Role="TBL_USER_LOGIN_TRAIL" EntitySet="TBL_USER_LOGIN_TRAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_PARENTS_DETAILS_TBL_USER_LOGIN" Association="Self.FK_TBL_USER_PARENTS_DETAILS_TBL_USER_LOGIN">
+      <End Role="TBL_USER_LOGIN" EntitySet="TBL_USER_LOGIN" />
+      <End Role="TBL_USER_PARENTS_DETAILS" EntitySet="TBL_USER_PARENTS_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_PROFESSIONAL_DETAILS_TBL_USER_LOGIN" Association="Self.FK_TBL_USER_PROFESSIONAL_DETAILS_TBL_USER_LOGIN">
+      <End Role="TBL_USER_LOGIN" EntitySet="TBL_USER_LOGIN" />
+      <End Role="TBL_USER_PROFESSIONAL_DETAILS" EntitySet="TBL_USER_PROFESSIONAL_DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_ROLE_TBL_MASTER_USERTYPE" Association="Self.FK_TBL_USER_ROLE_TBL_MASTER_USERTYPE">
+      <End Role="TBL_MASTER_USERTYPE" EntitySet="TBL_MASTER_USERTYPE" />
+      <End Role="TBL_USER_ROLE" EntitySet="TBL_USER_ROLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_ROLE_TBL_USER_LOGIN" Association="Self.FK_TBL_USER_ROLE_TBL_USER_LOGIN">
+      <End Role="TBL_USER_LOGIN" EntitySet="TBL_USER_LOGIN" />
+      <End Role="TBL_USER_ROLE" EntitySet="TBL_USER_ROLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_SUBJECTS_TBL_MASTER_SUBJECT" Association="Self.FK_TBL_USER_SUBJECTS_TBL_MASTER_SUBJECT">
+      <End Role="TBL_MASTER_SUBJECT" EntitySet="TBL_MASTER_SUBJECT" />
+      <End Role="TBL_USER_SUBJECTS" EntitySet="TBL_USER_SUBJECTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USER_SUBJECTS_TBL_USER_LOGIN" Association="Self.FK_TBL_USER_SUBJECTS_TBL_USER_LOGIN">
+      <End Role="TBL_USER_LOGIN" EntitySet="TBL_USER_LOGIN" />
+      <End Role="TBL_USER_SUBJECTS" EntitySet="TBL_USER_SUBJECTS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

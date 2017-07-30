@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91A99180-BFC8-4202-BE68-62D7EB042342}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Education.DB</RootNamespace>
+    <AssemblyName>Education.DB</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EducationModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EducationModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EducationModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EducationModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EducationModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TBL_GN_ANNAUNCMENT.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_GN_DIGITALDOC_DETAILS.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_GN_DIGITALDOC_VIEWDETAILS.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_MASTER_BOARDS.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_MASTER_CITY.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_MASTER_CLASS.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_MASTER_COUNTRY.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_MASTER_COURSE.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_MASTER_DIGITALDOC.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_MASTER_DOCUMENTTYPE.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_MASTER_STATE.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_MASTER_STATUS.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_MASTER_SUBJECT.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_MASTER_TESTQUESTIONTYPE.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_MASTER_USERTYPE.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_TEST_ANSWERS.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_TEST_ATAMPT.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_TEST_ATAMPT_QUESTION_ANSWER.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_TEST_QUESTIONS.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_TEST_TESTDETAIL.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_USER_ADDRESS_DETAILS.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_USER_COURSE_DETAILS.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_USER_DETAILS.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_USER_DOCUMENTS_DETAILS.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_USER_INSTITUTION_DETAILS.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_USER_LOGIN.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_USER_LOGIN_TRAIL.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_USER_PARENTS_DETAILS.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_USER_PROFESSIONAL_DETAILS.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_USER_ROLE.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_USER_SUBJECTS.cs">
+      <DependentUpon>EducationModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="EducationModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EducationModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="EducationModel.edmx.diagram">
+      <DependentUpon>EducationModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EducationModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EducationModel.edmx</DependentUpon>
+      <LastGenOutput>EducationModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EducationModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EducationModel.edmx</DependentUpon>
+      <LastGenOutput>EducationModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

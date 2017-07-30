@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Education.DB.TBL_USER_DETAILS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.USERID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FIRSTNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MIDDLENAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LASTNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MOTHERNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FATHERNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DISABILITY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENROLNMENTID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GENDER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NATIONALITY)
+        </th>
+        <th></th>
+    </tr>
+
+    @*@foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.USERID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FIRSTNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MIDDLENAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LASTNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MOTHERNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FATHERNAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DISABILITY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ENROLNMENTID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GENDER)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NATIONALITY)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.PERSONALDETAILID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.PERSONALDETAILID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.PERSONALDETAILID })
+            </td>
+        </tr>
+    }*@
+
+</table>

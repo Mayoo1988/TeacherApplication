@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ajay_dbModelStoreContainer" CdmEntityContainer="ajay_dbEntities">
+    <EntitySetMapping Name="TBL_GN_ANNAUNCMENT">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_GN_ANNAUNCMENT">
+        <MappingFragment StoreEntitySet="TBL_GN_ANNAUNCMENT">
+          <ScalarProperty Name="ANNAUNCMENTID" ColumnName="ANNAUNCMENTID" />
+          <ScalarProperty Name="SUMMARY" ColumnName="SUMMARY" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="PUBLISHDATE" ColumnName="PUBLISHDATE" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="MODIFIEDBY" ColumnName="MODIFIEDBY" />
+          <ScalarProperty Name="MODIFIEDDATE" ColumnName="MODIFIEDDATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_GN_DIGITALDOC_DETAILS">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_GN_DIGITALDOC_DETAILS">
+        <MappingFragment StoreEntitySet="TBL_GN_DIGITALDOC_DETAILS">
+          <ScalarProperty Name="DIGITALDOCID" ColumnName="DIGITALDOCID" />
+          <ScalarProperty Name="DIGITALDOCTYPEID" ColumnName="DIGITALDOCTYPEID" />
+          <ScalarProperty Name="DOCUMENTNAME" ColumnName="DOCUMENTNAME" />
+          <ScalarProperty Name="SUBJECTID" ColumnName="SUBJECTID" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="MODIFIEDBY" ColumnName="MODIFIEDBY" />
+          <ScalarProperty Name="MODIFIEDDATE" ColumnName="MODIFIEDDATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="ALLOWANONYMOUS" ColumnName="ALLOWANONYMOUS" />
+          <ScalarProperty Name="DOWNLOADCOUNT" ColumnName="DOWNLOADCOUNT" />
+          <ScalarProperty Name="VIEWCOUNT" ColumnName="VIEWCOUNT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_GN_DIGITALDOC_VIEWDETAILS">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_GN_DIGITALDOC_VIEWDETAILS">
+        <MappingFragment StoreEntitySet="TBL_GN_DIGITALDOC_VIEWDETAILS">
+          <ScalarProperty Name="DOCVIEWID" ColumnName="DOCVIEWID" />
+          <ScalarProperty Name="DIGITALDOCID" ColumnName="DIGITALDOCID" />
+          <ScalarProperty Name="VIEWBY" ColumnName="VIEWBY" />
+          <ScalarProperty Name="DOWNLOADBY" ColumnName="DOWNLOADBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="MODIFIEDDATE" ColumnName="MODIFIEDDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_MASTER_BOARDS">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_MASTER_BOARDS">
+        <MappingFragment StoreEntitySet="TBL_MASTER_BOARDS">
+          <ScalarProperty Name="BOARDID" ColumnName="BOARDID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_MASTER_CITY">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_MASTER_CITY">
+        <MappingFragment StoreEntitySet="TBL_MASTER_CITY">
+          <ScalarProperty Name="CITYID" ColumnName="CITYID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="STATEID" ColumnName="STATEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_MASTER_CLASS">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_MASTER_CLASS">
+        <MappingFragment StoreEntitySet="TBL_MASTER_CLASS">
+          <ScalarProperty Name="CLASSID" ColumnName="CLASSID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_MASTER_COUNTRY">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_MASTER_COUNTRY">
+        <MappingFragment StoreEntitySet="TBL_MASTER_COUNTRY">
+          <ScalarProperty Name="COUNTRYID" ColumnName="COUNTRYID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_MASTER_COURSE">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_MASTER_COURSE">
+        <MappingFragment StoreEntitySet="TBL_MASTER_COURSE">
+          <ScalarProperty Name="COURSEID" ColumnName="COURSEID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_MASTER_DIGITALDOC">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_MASTER_DIGITALDOC">
+        <MappingFragment StoreEntitySet="TBL_MASTER_DIGITALDOC">
+          <ScalarProperty Name="DIGITALDOCTYPEID" ColumnName="DIGITALDOCTYPEID" />
+          <ScalarProperty Name="DIGITALDOCNAME" ColumnName="DIGITALDOCNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_MASTER_DOCUMENTTYPE">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_MASTER_DOCUMENTTYPE">
+        <MappingFragment StoreEntitySet="TBL_MASTER_DOCUMENTTYPE">
+          <ScalarProperty Name="DocumentTypeID" ColumnName="DocumentTypeID" />
+          <ScalarProperty Name="DocumentTypeName" ColumnName="DocumentTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_MASTER_STATE">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_MASTER_STATE">
+        <MappingFragment StoreEntitySet="TBL_MASTER_STATE">
+          <ScalarProperty Name="STATEID" ColumnName="STATEID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="COUNTRYID" ColumnName="COUNTRYID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_MASTER_STATUS">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_MASTER_STATUS">
+        <MappingFragment StoreEntitySet="TBL_MASTER_STATUS">
+          <ScalarProperty Name="STATUSID" ColumnName="STATUSID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_MASTER_SUBJECT">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_MASTER_SUBJECT">
+        <MappingFragment StoreEntitySet="TBL_MASTER_SUBJECT">
+          <ScalarProperty Name="SUBJECTID" ColumnName="SUBJECTID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_MASTER_TESTQUESTIONTYPE">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_MASTER_TESTQUESTIONTYPE">
+        <MappingFragment StoreEntitySet="TBL_MASTER_TESTQUESTIONTYPE">
+          <ScalarProperty Name="QUESTIONTYPEID" ColumnName="QUESTIONTYPEID" />
+          <ScalarProperty Name="TYPENAME" ColumnName="TYPENAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_MASTER_USERTYPE">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_MASTER_USERTYPE">
+        <MappingFragment StoreEntitySet="TBL_MASTER_USERTYPE">
+          <ScalarProperty Name="USERTYPEID" ColumnName="USERTYPEID" />
+          <ScalarProperty Name="TYPENAME" ColumnName="TYPENAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_TEST_ANSWERS">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_TEST_ANSWERS">
+        <MappingFragment StoreEntitySet="TBL_TEST_ANSWERS">
+          <ScalarProperty Name="ANSWERID" ColumnName="ANSWERID" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="QUESTIONID" ColumnName="QUESTIONID" />
+          <ScalarProperty Name="TESTID" ColumnName="TESTID" />
+          <ScalarProperty Name="ISVALID" ColumnName="ISVALID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_TEST_ATAMPT">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_TEST_ATAMPT">
+        <MappingFragment StoreEntitySet="TBL_TEST_ATAMPT">
+          <ScalarProperty Name="TESTATAMPTID" ColumnName="TESTATAMPTID" />
+          <ScalarProperty Name="TESTID" ColumnName="TESTID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="STARTDATETIME" ColumnName="STARTDATETIME" />
+          <ScalarProperty Name="ENDDATETIME" ColumnName="ENDDATETIME" />
+          <ScalarProperty Name="TOTALMARKS" ColumnName="TOTALMARKS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_TEST_ATAMPT_QUESTION_ANSWER">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_TEST_ATAMPT_QUESTION_ANSWER">
+        <MappingFragment StoreEntitySet="TBL_TEST_ATAMPT_QUESTION_ANSWER">
+          <ScalarProperty Name="ATAMPTTESTANSWERID" ColumnName="ATAMPTTESTANSWERID" />
+          <ScalarProperty Name="QUESTIONID" ColumnName="QUESTIONID" />
+          <ScalarProperty Name="ANSWERID" ColumnName="ANSWERID" />
+          <ScalarProperty Name="TESTID" ColumnName="TESTID" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_TEST_QUESTIONS">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_TEST_QUESTIONS">
+        <MappingFragment StoreEntitySet="TBL_TEST_QUESTIONS">
+          <ScalarProperty Name="QUESTIONID" ColumnName="QUESTIONID" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="ISMULTISELECT" ColumnName="ISMULTISELECT" />
+          <ScalarProperty Name="TESTID" ColumnName="TESTID" />
+          <ScalarProperty Name="QUESTIONTYPEID" ColumnName="QUESTIONTYPEID" />
+          <ScalarProperty Name="MARKS" ColumnName="MARKS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_TEST_TESTDETAIL">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_TEST_TESTDETAIL">
+        <MappingFragment StoreEntitySet="TBL_TEST_TESTDETAIL">
+          <ScalarProperty Name="TESTID" ColumnName="TESTID" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="SUBJECTID" ColumnName="SUBJECTID" />
+          <ScalarProperty Name="PUBLISHDATE" ColumnName="PUBLISHDATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="GIVENBY" ColumnName="GIVENBY" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="MODIFIEDBY" ColumnName="MODIFIEDBY" />
+          <ScalarProperty Name="MODIFIEDDATE" ColumnName="MODIFIEDDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_USER_ADDRESS_DETAILS">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_USER_ADDRESS_DETAILS">
+        <MappingFragment StoreEntitySet="TBL_USER_ADDRESS_DETAILS">
+          <ScalarProperty Name="ADDRESSDETAILID" ColumnName="ADDRESSDETAILID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="ADDRESSTYPEID" ColumnName="ADDRESSTYPEID" />
+          <ScalarProperty Name="ADDRESSLINE1" ColumnName="ADDRESSLINE1" />
+          <ScalarProperty Name="ADDRESSLINE2" ColumnName="ADDRESSLINE2" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+          <ScalarProperty Name="PINCODE" ColumnName="PINCODE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="MODIFIEDDATE" ColumnName="MODIFIEDDATE" />
+          <ScalarProperty Name="MODIFIEDBY" ColumnName="MODIFIEDBY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_USER_COURSE_DETAILS">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_USER_COURSE_DETAILS">
+        <MappingFragment StoreEntitySet="TBL_USER_COURSE_DETAILS">
+          <ScalarProperty Name="STUDENTCOURSEID" ColumnName="STUDENTCOURSEID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="COURSEID" ColumnName="COURSEID" />
+          <ScalarProperty Name="JOINDATE" ColumnName="JOINDATE" />
+          <ScalarProperty Name="COMPLETEDATE" ColumnName="COMPLETEDATE" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="MODIFIEDBY" ColumnName="MODIFIEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="MODIFIEDDATE" ColumnName="MODIFIEDDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_USER_DETAILS">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_USER_DETAILS">
+        <MappingFragment StoreEntitySet="TBL_USER_DETAILS">
+          <ScalarProperty Name="PERSONALDETAILID" ColumnName="PERSONALDETAILID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+          <ScalarProperty Name="MIDDLENAME" ColumnName="MIDDLENAME" />
+          <ScalarProperty Name="LASTNAME" ColumnName="LASTNAME" />
+          <ScalarProperty Name="MOTHERNAME" ColumnName="MOTHERNAME" />
+          <ScalarProperty Name="FATHERNAME" ColumnName="FATHERNAME" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="DISABILITY" ColumnName="DISABILITY" />
+          <ScalarProperty Name="ENROLNMENTID" ColumnName="ENROLNMENTID" />
+          <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+          <ScalarProperty Name="NATIONALITY" ColumnName="NATIONALITY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_USER_DOCUMENTS_DETAILS">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_USER_DOCUMENTS_DETAILS">
+        <MappingFragment StoreEntitySet="TBL_USER_DOCUMENTS_DETAILS">
+          <ScalarProperty Name="USERDOCUMENTID" ColumnName="USERDOCUMENTID" />
+          <ScalarProperty Name="DOCUMENTTYPEID" ColumnName="DOCUMENTTYPEID" />
+          <ScalarProperty Name="DOCUMENTNAME" ColumnName="DOCUMENTNAME" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="MODIFIEDBY" ColumnName="MODIFIEDBY" />
+          <ScalarProperty Name="MODIFIEDDATE" ColumnName="MODIFIEDDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_USER_INSTITUTION_DETAILS">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_USER_INSTITUTION_DETAILS">
+        <MappingFragment StoreEntitySet="TBL_USER_INSTITUTION_DETAILS">
+          <ScalarProperty Name="INSTITUTIONID" ColumnName="INSTITUTIONID" />
+          <ScalarProperty Name="INSTITUTIONNAME" ColumnName="INSTITUTIONNAME" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="CLASSID" ColumnName="CLASSID" />
+          <ScalarProperty Name="BOARDID" ColumnName="BOARDID" />
+          <ScalarProperty Name="PASSINGYEAR" ColumnName="PASSINGYEAR" />
+          <ScalarProperty Name="GRADE_PERCENT" ColumnName="GRADE_PERCENT" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="MODIFIEDBY" ColumnName="MODIFIEDBY" />
+          <ScalarProperty Name="MODIFIEDDATE" ColumnName="MODIFIEDDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_USER_LOGIN">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_USER_LOGIN">
+        <MappingFragment StoreEntitySet="TBL_USER_LOGIN">
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="LOGIN_EMAIL" ColumnName="LOGIN_EMAIL" />
+          <ScalarProperty Name="LOGIN_MOBILE" ColumnName="LOGIN_MOBILE" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="STATUSID" ColumnName="STATUSID" />
+          <ScalarProperty Name="USERTYPEID" ColumnName="USERTYPEID" />
+          <ScalarProperty Name="PASSWORDRETRYCOUNT" ColumnName="PASSWORDRETRYCOUNT" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="MODIFIEDDATE" ColumnName="MODIFIEDDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_USER_LOGIN_TRAIL">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_USER_LOGIN_TRAIL">
+        <MappingFragment StoreEntitySet="TBL_USER_LOGIN_TRAIL">
+          <ScalarProperty Name="LOGIN_TRAIL_ID" ColumnName="LOGIN_TRAIL_ID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="IPADDRESS" ColumnName="IPADDRESS" />
+          <ScalarProperty Name="LATITUTE" ColumnName="LATITUTE" />
+          <ScalarProperty Name="LONGITUTE" ColumnName="LONGITUTE" />
+          <ScalarProperty Name="LOGINDATETIME" ColumnName="LOGINDATETIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_USER_PARENTS_DETAILS">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_USER_PARENTS_DETAILS">
+        <MappingFragment StoreEntitySet="TBL_USER_PARENTS_DETAILS">
+          <ScalarProperty Name="PARENTID" ColumnName="PARENTID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="FATHERNAME" ColumnName="FATHERNAME" />
+          <ScalarProperty Name="FATHEREMAIL" ColumnName="FATHEREMAIL" />
+          <ScalarProperty Name="FATHERMOBILENUMBER" ColumnName="FATHERMOBILENUMBER" />
+          <ScalarProperty Name="FATHEROCCUPATION" ColumnName="FATHEROCCUPATION" />
+          <ScalarProperty Name="FATHERCOMPANYNAME" ColumnName="FATHERCOMPANYNAME" />
+          <ScalarProperty Name="FATHERDESIGNATION" ColumnName="FATHERDESIGNATION" />
+          <ScalarProperty Name="MOTHERNAME" ColumnName="MOTHERNAME" />
+          <ScalarProperty Name="MOTHEREMAIL" ColumnName="MOTHEREMAIL" />
+          <ScalarProperty Name="MOTHERMOBILENUMBER" ColumnName="MOTHERMOBILENUMBER" />
+          <ScalarProperty Name="MOTHEROCCUPATION" ColumnName="MOTHEROCCUPATION" />
+          <ScalarProperty Name="MOTHERCOMPANYNAME" ColumnName="MOTHERCOMPANYNAME" />
+          <ScalarProperty Name="MOTHERDESIGNATION" ColumnName="MOTHERDESIGNATION" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="MODIFIEDBY" ColumnName="MODIFIEDBY" />
+          <ScalarProperty Name="MODIFIEDDATE" ColumnName="MODIFIEDDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_USER_PROFESSIONAL_DETAILS">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_USER_PROFESSIONAL_DETAILS">
+        <MappingFragment StoreEntitySet="TBL_USER_PROFESSIONAL_DETAILS">
+          <ScalarProperty Name="PROFESSIONALDETAILID" ColumnName="PROFESSIONALDETAILID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="COMPANYNAME" ColumnName="COMPANYNAME" />
+          <ScalarProperty Name="DESIGNATION" ColumnName="DESIGNATION" />
+          <ScalarProperty Name="EMPLOYEETYPE" ColumnName="EMPLOYEETYPE" />
+          <ScalarProperty Name="REMARKS" ColumnName="REMARKS" />
+          <ScalarProperty Name="CREATEBY" ColumnName="CREATEBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="MODIFIEDDBY" ColumnName="MODIFIEDDBY" />
+          <ScalarProperty Name="MODIFIEDDATE" ColumnName="MODIFIEDDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_USER_ROLE">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_USER_ROLE">
+        <MappingFragment StoreEntitySet="TBL_USER_ROLE">
+          <ScalarProperty Name="ROLE_ID" ColumnName="ROLE_ID" />
+          <ScalarProperty Name="USERTYPEID" ColumnName="USERTYPEID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="MODIFIEDBY" ColumnName="MODIFIEDBY" />
+          <ScalarProperty Name="MODIFIEDDATE" ColumnName="MODIFIEDDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_USER_SUBJECTS">
+      <EntityTypeMapping TypeName="ajay_dbModel.TBL_USER_SUBJECTS">
+        <MappingFragment StoreEntitySet="TBL_USER_SUBJECTS">
+          <ScalarProperty Name="USERSUBJECTID" ColumnName="USERSUBJECTID" />
+          <ScalarProperty Name="SUBJECTID" ColumnName="SUBJECTID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="CREATEDBY" ColumnName="CREATEDBY" />
+          <ScalarProperty Name="CREATEDDATE" ColumnName="CREATEDDATE" />
+          <ScalarProperty Name="MODIFIEDBY" ColumnName="MODIFIEDBY" />
+          <ScalarProperty Name="MODIFIEDDATE" ColumnName="MODIFIEDDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

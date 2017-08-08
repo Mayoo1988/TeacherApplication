@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CountryStateCity\CountryStateCityReposetory.cs" />
+    <Compile Include="CountryStateCity\ICountryStateCityReposetory.cs" />
+    <Compile Include="Students\IStudentReposetory.cs" />
+    <Compile Include="Students\StudentReposetory.cs" />
     <Compile Include="User\IUserReposetory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User\UserReposetory.cs" />

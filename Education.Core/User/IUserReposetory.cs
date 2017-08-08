@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Education.Entity;
+using Education.Entity.Login;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +10,9 @@ namespace Education.Core
 {
    public interface IUserReposetory
     {
+        LoginResponse Login(Login login);
         int InsertUserType(string usertype);
+        List<UserType> GetUserType();
      
     }
 }

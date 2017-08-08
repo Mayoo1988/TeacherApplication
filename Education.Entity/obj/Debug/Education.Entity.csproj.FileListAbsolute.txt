@@ -8,3 +8,8 @@ C:\EducationApp\EducationApp\EducationApp\Education.Entity\bin\Debug\Education.E
 C:\EducationApp\EducationApp\EducationApp\Education.Entity\obj\Debug\Education.Entity.csprojResolveAssemblyReference.cache
 C:\EducationApp\EducationApp\EducationApp\Education.Entity\obj\Debug\Education.Entity.dll
 C:\EducationApp\EducationApp\EducationApp\Education.Entity\obj\Debug\Education.Entity.pdb
+C:\Users\Manu\Source\Repos\TeacherApplication\Education.Entity\obj\Debug\Education.Entity.csprojResolveAssemblyReference.cache
+C:\Users\Manu\Source\Repos\TeacherApplication\Education.Entity\obj\Debug\Education.Entity.dll
+C:\Users\Manu\Source\Repos\TeacherApplication\Education.Entity\obj\Debug\Education.Entity.pdb
+C:\Users\Manu\Source\Repos\TeacherApplication\Education.Entity\bin\Debug\Education.Entity.dll
+C:\Users\Manu\Source\Repos\TeacherApplication\Education.Entity\bin\Debug\Education.Entity.pdb

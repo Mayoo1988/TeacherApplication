@@ -1,0 +1,102 @@
+﻿@model Education.WebApp.Areas.Admin.Models.Students.StudentInstitution
+
+<h1>
+    Institution Details
+
+</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Class
+
+            </th>
+            <th>
+                Name of School / Institute
+            </th>
+            <th>
+                Boards
+            </th>
+            <th>
+                Year of Passing
+            </th>
+            <th>
+                Grade / Percentage
+            </th>
+            <th>
+
+            </th>
+        </tr>
+
+
+    </thead>
+    <tbody>
+        @Html.BeginForm("deleteInstitute", "Student", FormMethod.Post) {
+        @foreach (var item in Model.StudentInstitutionDetailsList)
+        {
+            <tr>
+                <td>
+                    @item.Classes.Where(X => X.Value == item.ClassID.ToString()).Single().Text
+
+                </td>
+                <td>
+                    @item.INSTITUTIONNAME
+                </td>
+
+                <td>
+                    @item.Boards.Where(X => X.Value == item.BOARDID.ToString()).Single().Text
+                </td>
+                <td>
+                    @item.PASSINGYEAR
+                </td>
+                <td>
+                    @item.GRADE_PERCENT
+                </td>
+                <td>
+                    <input type="hidden" name="InstituteID" value="@item.INSTITUTIONID" />
+                    <input type="hidden" name="InstituteID" value="@item.UserID" />
+                    <input type="button" onclick="javascript: return confirm('Are you sure want to delete this');" value="Delete" />
+                </td>
+
+            </tr>
+
+        }
+        }
+        @Html.BeginForm("AddInstitute", "Student", FormMethod.Post)
+        {
+        <tr>
+            <td>
+                @Html.DropDownListFor(m => m.StudentInstitutionDetails.ClassID, Model.StudentInstitutionDetails.Classes)
+                @Html.ValidationMessageFor(m => m.StudentInstitutionDetails.ClassID)
+
+            </td>
+            <td>
+                @Html.TextBoxFor(M => M.StudentInstitutionDetails.INSTITUTIONNAME)
+                @Html.ValidationMessageFor(m => m.StudentInstitutionDetails.INSTITUTIONNAME)
+            </td>
+
+            <td>
+                @Html.DropDownListFor(m => m.StudentInstitutionDetails.BOARDID, Model.StudentInstitutionDetails.Boards)
+                @Html.ValidationMessageFor(m => m.StudentInstitutionDetails.BOARDID)
+            </td>
+            <td>
+                @Html.DropDownListFor(m => m.StudentInstitutionDetails.PASSINGYEAR, Model.StudentInstitutionDetails.PASSINGYEARList)
+                @Html.ValidationMessageFor(m => m.StudentInstitutionDetails.PASSINGYEAR)
+            </td>
+            <td>
+                @Html.TextBoxFor(M => M.StudentInstitutionDetails.GRADE_PERCENT)
+                @Html.ValidationMessageFor(m => m.StudentInstitutionDetails.GRADE_PERCENT)
+            </td>
+            <td>
+                @Html.HiddenFor(m => m.StudentInstitutionDetails.UserID)
+
+                <input type="submit" value="Add" />
+            </td>
+
+        </tr>
+        }
+
+    </tbody>
+
+</table>        

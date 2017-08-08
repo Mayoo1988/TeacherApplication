@@ -16,6 +16,10 @@ namespace Education.WebApp.Controllers
 
         public ActionResult AddStudentDetails()
         {
+            
+
+
+
             return View();
         }
 

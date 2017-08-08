@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6df3f79f75aa4240973d17045290f2d5" Name="Diagram1">
+        <EntityTypeShape EntityType="EducationDBContext.TBL_GN_ANNAUNCMENT" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_GN_DIGITALDOC_DETAILS" Width="1.5" PointX="11.25" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_GN_DIGITALDOC_VIEWDETAILS" Width="1.5" PointX="13.5" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_MASTER_BOARDS" Width="1.5" PointX="6" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_MASTER_CITY" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_MASTER_CLASS" Width="1.5" PointX="6" PointY="35.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_MASTER_COUNTRY" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_MASTER_COURSE" Width="1.5" PointX="6" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_MASTER_DIGITALDOC" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_MASTER_DOCUMENTTYPE" Width="1.5" PointX="6" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_MASTER_STATE" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_MASTER_STATUS" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_MASTER_SUBJECT" Width="1.5" PointX="9" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_MASTER_TESTQUESTIONTYPE" Width="1.5" PointX="9" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_MASTER_USERTYPE" Width="1.5" PointX="0.75" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_TEST_ANSWERS" Width="1.5" PointX="8.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_TEST_ATAMPT" Width="1.5" PointX="5.25" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_TEST_ATAMPT_QUESTION_ANSWER" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_TEST_QUESTIONS" Width="1.5" PointX="11.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_TEST_TESTDETAIL" Width="1.5" PointX="3" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_USER_ADDRESS_DETAILS" Width="1.5" PointX="5.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_USER_COURSE_DETAILS" Width="1.5" PointX="8.25" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_USER_DETAILS" Width="1.5" PointX="5.25" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_USER_DOCUMENTS_DETAILS" Width="1.5" PointX="8.25" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_USER_INSTITUTION_DETAILS" Width="1.5" PointX="8.25" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_USER_LOGIN" Width="1.5" PointX="3" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_USER_LOGIN_TRAIL" Width="1.5" PointX="5.25" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_USER_PARENTS_DETAILS" Width="1.5" PointX="5.25" PointY="41.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_USER_PROFESSIONAL_DETAILS" Width="1.5" PointX="5.25" PointY="47.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_USER_ROLE" Width="1.5" PointX="11.25" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationDBContext.TBL_USER_SUBJECTS" Width="1.5" PointX="11.25" PointY="19.125" IsExpanded="true" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_GN_DIGITALDOC_DETAILS_TBL_MASTER_SUBJECT" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_GN_DIGITALDOC_VIEWDETAILS_TBL_GN_DIGITALDOC_DETAILS" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_INSTITUTION_DETAILS_TBL_MASTER_BOARDS" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_MASTER_CITY_TBL_MASTER_STATE" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_INSTITUTION_DETAILS_TBL_MASTER_CLASS" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_MASTER_STATE_TBL_MASTER_COUNTRY" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_COURSE_DETAILS_TBL_MASTER_COURSE" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_DOCUMENTS_DETAILS_TBL_MASTER_DOCUMENTTYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_LOGIN_TBL_MASTER_STATUS" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_TEST_TESTDETAIL_TBL_MASTER_SUBJECT" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_SUBJECTS_TBL_MASTER_SUBJECT" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_TEST_QUESTIONS_TBL_MASTER_TESTQUESTIONTYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_LOGIN_TBL_MASTER_USERTYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_ROLE_TBL_MASTER_USERTYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_TEST_ANSWERS_TBL_TEST_QUESTIONS" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_TEST_ANSWERS_TBL_TEST_TESTDETAIL" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_TEST_ATAMPT_TBL_TEST_TESTDETAIL" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_TEST_ATAMPT_TBL_USER_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_TEST_ATAMPT_QUESTION_ANSWER_TBL_TEST_QUESTIONS" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_TEST_ATAMPT_QUESTION_ANSWER_TBL_TEST_TESTDETAIL" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_Table_1_TBL_TEST_TESTDETAIL" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_ADDRESS_DETAILS_TBL_USER_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_COURSE_DETAILS_TBL_USER_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_DETAILS_TBL_USER_DETAILS" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_DOCUMENTS_DETAILS_TBL_USER_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_INSTITUTION_DETAILS_TBL_USER_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_LOGIN_TRAIL_TBL_USER_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_PARENTS_DETAILS_TBL_USER_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_PROFESSIONAL_DETAILS_TBL_USER_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_ROLE_TBL_USER_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationDBContext.FK_TBL_USER_SUBJECTS_TBL_USER_LOGIN" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

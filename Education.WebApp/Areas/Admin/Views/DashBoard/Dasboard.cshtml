@@ -1,0 +1,603 @@
+﻿
+
+
+<div id="notifications" class="modal fade large-text" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog full-screen-modal">
+        <div class="modal-content full-screen-modal">
+            <form method="post" class="reset-margin">
+                <div class="modal-header notifications-modal-header row reset-margin">
+                    <div class="col-md-10 col-xs-9">
+                        <h2 class="modal-title" id="myModalLabel">Notifications (4)</h2>
+                    </div>
+                    <div class="col-md-2 col-xs-3 right-align reset-padding">
+                        <button type="button" class="btn btn-grey btn-lg" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <div class="modal-body notifications-body row reset-margin">
+
+                    <div class="seperator-div"></div>
+                    <table id="" class="data_table_modal display responsive" width="100%">
+                        <thead>
+                            <tr>
+                                <th class="all">Date / Time</th>
+                                <th class="all">Activity</th>
+                                <th class="desktop largescreen">Reason / Subject</th>
+                                <th class="desktop largescreen">Recepients</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>22 Aug 2017 - 12:30pm</td>
+                                <td><i class="fa fa-envelope fa-2x" style="color:#fdcf58;"></i>&nbsp; - Email Sent</td>
+                                <td>Subject: Regarding your requirement</td>
+                                <td>Rajeev</td>
+                            </tr>
+                            <tr>
+                                <td>06 Sep 2017 - 02:30pm</td>
+                                <td><i class="fa fa-file fa-2x" style="color:#ee4035"></i>&nbsp;&nbsp; - Quotation Created</td>
+                                <td>Quotation created for Product / Service 1</td>
+                                <td>Sharon</td>
+                            </tr>
+                            <tr>
+                                <td>06 Sep 2017 - 04:00pm</td>
+                                <td><i class="fa fa-phone fa-2x" style="color:#00aedb;"></i>&nbsp;&nbsp; - Call Made</td>
+                                <td>Reason: Follow up call</td>
+                                <td>Shaily</td>
+                            </tr>
+                            <tr>
+                                <td>21 Sep 2017 - 05:30pm</td>
+                                <td><i class="fa fa-comment fa-2x" style="color:#00b159;"></i>&nbsp; - SMS Sent</td>
+                                <td>Message: Reminder about your enquiry</td>
+                                <td>Evlan</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <br>
+
+                    <center><button id="collapse_more" type="button" class="btn btn-blue" data-toggle="collapse" data-target="#demo" style="background-color: #8ad1f5;padding: 2px 20px; border-radius: 15px;color: #fff;font-family: 'Open Sans', sans-serif;" onClick="change_content();">More</button></center>
+
+                    <div id="demo" class="element-margin collapse out">
+
+                        <div class="seperator-div"></div>
+                        <table id="" class="data_table_modal display responsive" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="all">Date / Time</th>
+                                    <th class="all">Activity</th>
+                                    <th class="desktop largescreen">Reason / Subject</th>
+                                    <th class="desktop largescreen">Recepients</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>17 Aug 2017 - 10:30am</td>
+                                    <td><img src="images/module-icons/meeting/meeting-task.png">&nbsp; - Meeting Scheduled</td>
+                                    <td>Meeting Purpose: Meeting for closing</td>
+                                    <td>Rajeev</td>
+                                </tr>
+                                <tr>
+                                    <td>14 Aug 2017 - 11:15am</td>
+                                    <td><i class="fa fa-envelope fa-2x" style="color:#fdcf58;"></i>&nbsp;&nbsp; - Email Scheduled</td>
+                                    <td>Subject: Reminder about your enquiry</td>
+                                    <td>Arnold</td>
+                                </tr>
+                                <tr>
+                                    <td>17 Aug 2017 - 03:30pm</td>
+                                    <td><i class="fa fa-phone fa-2x" style="color:#00aedb;"></i>&nbsp;&nbsp;&nbsp; - Call Schedule</td>
+                                    <td>Reason: Follow up call</td>
+                                    <td>Namit</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <script type="text/javascript">
+            function change_content()
+            {
+              if($("#collapse_more").html()=="More")
+                $("#collapse_more").html("Less");
+              else if($("#collapse_more").html()=="Less")
+                $("#collapse_more").html("More");
+            }
+                        </script>
+                    </div>
+                </div>
+                <div class="modal-footer notifications-modal-footer reset-margin">
+                    <button type="button" class="btn btn-grey btn-lg" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container full-width-container">
+    <div id="home-container" class="full-width-background">
+
+        <div>
+            <div class="tabs-dashboard">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab_default_1">
+                        <div class="container">
+                            <div id="main" class="col-md-12">
+                                <a href="modules/sales-target/sales-target.php?currentMod=sales-target"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/sales-target-icon.png"><div class="clear"></div><p>Sales Target</p></div></a>
+                                <a href="modules/student/student.php?currentMod=student"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/student/student-enquiry.png"><div class="clear"></div><p>Students</p></div></a>
+                                <a href="modules/leads/leads.php?currentMod=leads"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/leads-icon.png"><div class="clear"></div><p>Leads</p></div></a>
+                                <a href="modules/quotations/quotations.php?currentMod=quotations"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/quotations-icon.png"><div class="clear"></div><p>Quotations</p></div></a>
+                                <a href="modules/clients/clients.php?currentMod=clients"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/clients-icon.png"><div class="clear"></div><p>Clients</p></div></a>
+                                <a href="modules/appointments/appointments.php?currentMod=appointments"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/appointments/appointments.png"><div class="clear"></div><p>Appointments</p></div></a>
+                                <a href="modules/contacts/contacts.php?currentMod=contacts"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/contacts-icon.png"><div class="clear"></div><p>Contacts</p></div></a>
+                                <a href="modules/calendar/calendar.php"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/calendar/calendar-task.png"><div class="clear"></div><p>Calendar</p></div></a>
+                                <a href="modules/calls/calls.php?currentMod=calls"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/calls-icon.png"><div class="clear"></div><p>Calls</p></div></a>
+                                <a href="modules/email/mailbox.php"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/email/email.png"><div class="clear"></div><p><span style="color:red;">4</span> Emails</p></div></a>
+                                <a href="modules/emails/emails.php?currentMod=emails"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/emails-icon.png"><div class="clear"></div><p>Mass Emails</p></div></a>
+                                <a href="modules/sms/sms.php?currentMod=sms"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/sms-icon.png"><div class="clear"></div><p>SMS</p></div></a>
+                                <a href="modules/meeting/meeting.php?currentMod=meeting"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/meeting-icon.png"><div class="clear"></div><p>Meetings</p></div></a>
+                                <!--a href="modules/hr/hr.php?currentMod=hr"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/hr/hr.png"><div class="clear"></div><p>HR</p></div></a-->
+                                <a href="modules/trainers/trainers.php?currentMod=trainers"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/trainers/trainers.png"><div class="clear"></div><p>Trainers</p></div></a>
+                                <a href="modules/vendor/vendor.php?currentMod=vendor"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/vendor/vendor.png"><div class="clear"></div><p>Vendor</p></div></a>
+                                <a href="modules/support/support.php?currentMod=support"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/support-icon.png"><div class="clear"></div><p>Support</p></div></a>
+                                <a href="modules/payment-reminder/payment-reminder.php?currentMod=payment-reminder"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/payment-collection/payment-collection.png"><div class="clear"></div><p>Payment Reminder</p></div></a>
+                                <a href="modules/products-services/products-services.php?currentMod=products-services"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/products-services-icon.png"><div class="clear"></div><p>Products / Services</p></div></a>
+                                <!--a href="modules/loan/loan.php?currentMod=loan"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/loan/loan.png"><div class="clear"></div><p>Loans</p></div></a-->
+                                <a href="modules/import-data/import-data.php?currentMod=import-data"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/import-data-icon.png"><div class="clear"></div><p>Import Data</p></div></a>
+                                <a href="modules/maintenance-contracts/maintenance-contracts.php?currentMod=contract"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/maintenance-contracts-icon.png"><div class="clear"></div><p>Maintenance</p></div></a>
+                                <a href="modules/documents/documents.php?currentMod=documents"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/documents-module-icon.png"><div class="clear"></div><p>Documents</p></div></a>
+                                <a href="modules/tags/tags.php?currentMod=tags"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/tags-icon.png"><div class="clear"></div><p>Tags</p></div></a>
+                                <a href="modules/announcements/announcements.php?currentMod=announcements"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/announcements-icon.png"><div class="clear"></div><p>Announcements</p></div></a>
+                                <a href="modules/company/company.php?currentMod=company"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/company-icon.png"><div class="clear"></div><p>My Company</p></div></a>
+                                <a href="modules/tasks/tasks.php?currentMod=tasks"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/task/list-task.png"><div class="clear"></div><p>Tasks</p></div></a>
+                                <a href="modules/newsletter-greeting/newsletter-greeting.php?currentMod=newsletter-greeting"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/newsletter-greeting-icon.png"><div class="clear"></div><p>Newsletter Greeting</p></div></a>
+                                <a href="modules/birthday-anniversary/birthday-anniversary.php?currentMod=birthday-anniversary"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/birthday-anniversary-icon.png"><div class="clear"></div><p>Birthday &amp; Anniversary</p></div></a>
+                                <a href="modules/users/users.php?currentMod=users"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/users-icon.png"><div class="clear"></div><p>Users</p></div></a>
+                                <a href="modules/reports/reports.php?currentMod=reports"><div class="col-md-2 col-sm-3 col-xs-6 module-boxes"><img src="images/module-icons/reports-icon.png"><div class="clear"></div><p>Reports</p></div></a>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane reports-div" id="tab_default_2">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--div class="onoff col-md-12">
+          <label class="switch switch-green">
+            <input type="checkbox" id="onoff" class="switch-input" checked>
+            <span class="switch-label" data-on="On" data-off="Off"></span>
+            <span class="switch-handle"></span>
+          </label>
+        </div-->
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="col-md-12 footer-container">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 contact-strip">
+            <div class="center">Test drive the software. Get all your questions answered by our specialist.</div>
+        </div>
+        <div class="clear"></div>
+
+        <div class="crm-contact-container-modified header-contact-box">
+            <div class="col-md-3 reset-padding">
+                <div class="sales-person-image"></div>
+                <div class="contact-name name">Amit<p></p>+91 8080 041 500</div>
+            </div>
+            <div class="col-md-6 crm-contact-modified center">
+                <div class="col-md-12 enquiry contact-margin">
+                    <div class="call-image contact-image-div"></div>(+91) 92 0909 6844<br>
+                    (+91) 92 0909 6855<br>
+                    (+91) 932 4414 355
+                </div>
+                <div class="col-md-12"></div>
+                <div class="col-md-12 contact-margin">Mon to Fri - 10 am to 6 pm</div>
+                <div class="clear"></div>
+                <div class="enquiry col-md-6 contact-margin"><a href="javascript:void(0);" data-toggle="modal" data-section="contact-solution-architect" data-button="1" data-industry="" data-target="#enquire-now-popup"><div class="mail-image contact-image-div"></div>Consult Now</a></div>
+                <div class="enquiry col-md-6 contact-margin"><div class="skype-image contact-image-div"></div>dquip.crm</div>
+            </div>
+            <div class="col-md-3 reset-padding right-align">
+                <div class="sales-person-2-image"></div>
+                <div class="contact-name">Preetam<p></p>+91 8080 041 600</div>
+            </div>
+        </div>
+
+        <div class="crm-contact-container-mobile header-contact-box">
+            <div class="col-md-3 col-xs-6 col-sm-3 reset-padding">
+                <div class="sales-person-image"></div>
+                <div class="contact-name name">Amit<p></p>+91 8080 041 500</div>
+            </div>
+            <div class="col-md-3 col-xs-6 col-sm-3 reset-padding right-align">
+                <div class="sales-person-2-image"></div>
+                <div class="contact-name">Preetam<p></p>+91 8080 041 600</div>
+            </div>
+            <div class="clear"></div>
+            <div class="col-md-6 col-xs-12 col-sm-6 crm-contact-modified center">
+                <div class="col-md-12 enquiry contact-margin">
+                    <div class="call-image contact-image-div"></div>(+91) 92 0909 6844<br>
+                    (+91) 92 0909 6855<br>
+                    (+91) 932 4414 355
+                </div>
+                <div class="col-md-12"></div>
+                <div class="col-md-12 contact-margin">Mon to Fri - 10 am to 6 pm</div>
+                <div class="clear"></div>
+                <div class="enquiry col-md-6 contact-margin"><a href="javascript:void(0);" data-toggle="modal" data-section="contact-solution-architect" data-button="1" data-industry="" data-target="#enquire-now-popup"><div class="mail-image contact-image-div"></div>Consult Now</a></div>
+                <div class="enquiry col-md-6 contact-margin"><div class="skype-image contact-image-div"></div>dquip.crm</div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+<div id="videos" class="container">
+
+
+    <div class="col-md-12 footer-container">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 video-strip">
+            <div class="center">Watch CRM Videos</div>
+        </div>
+        <div class="clear"></div>
+        <div class="col-md-12 margin-top-15">
+
+            <a href="#" data-toggle="modal" data-title="Edit Journal Voucher" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/fwjt0Q_0dko"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/sales-target-icon.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Sales Target Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">1:38 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/-8lKckCMCkA"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/leads-icon.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Leads Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">3:16 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/mCUPry7LB4k"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/quotations-icon.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Quotations Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">3:42 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/JlHys1jGhss"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/clients-icon.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Clients Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">3:06 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/KD2-_b34W3s"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/contacts-icon.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Contacts Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">2:32 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/5gFq9fhLoUg"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/calendar/calendar-task.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Calendar Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">0:46 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/kKX9jEuK9f0"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/calls-icon.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Calls Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">1:33 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/gg9K2y2zRs4"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/emails-icon.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Emails Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">1:25 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/0GT6HeeX8iY"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/sms-icon.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">SMS Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">1:27 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/3JvXtIvS9iI"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/meeting-icon.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Meeting Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">1:30 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/cf5tcRXXEAQ"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/vendor/vendor.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Vendor Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">1:19 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/tgdyKF5SyeA"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/products-services-icon.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Products &amp; Services</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">2:02 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/AGkjal9L0uA"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/import-data-icon.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Import Data Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">1:15 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/RZX3p7ooB_8"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/documents-module-icon.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Documents Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">1:08 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/x93meopHz5w"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/tags-icon.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Tags Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">0:52 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/DCl-rtRQzvg"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/announcements-icon.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Announcements Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">1:00 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/X5raqrU_6eE"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/task/list-task.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Tasks Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">0:55 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/wloj2muVJK0"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/users-icon.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Users Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">1:03 min</span></div></div></a>
+
+            <a href="#" data-toggle="modal" data-target="#videoModal1" data-theVideo="https://www.youtube.com/embed/8VtbXyG1R9g"><div class="col-md-2 col-sm-3 col-xs-6 white-box"><img src="images/module-icons/reports-icon.png" id="utubeicon" /><div class="clear"></div><span id="utube" class="label">Reports Module</span><div class="col-md-12 reset-padding"><span id="utube" class="label vtime">1:32 min</span></div></div></a>
+
+            <div class="clear"></div>
+
+            <!--center>
+                <br>
+                <div class="yellow"><a href="javascript:void(0);" data-toggle="modal" data-target="#download-document-popup">Get Feature list + 111 Business reports</a></div></center-->
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="js/validation.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        resetDownloadDocumentForm();
+    });
+    function toggleDownloadDocumentForm(type)
+    {
+        if(type=="form")
+        {
+            $("#download-document-Label").html("Enter details to receive the document via email");
+            $("#download_document_form").show();
+            $("#download_document_successnotif").hide();
+        }
+        else if(type=="notif")
+        {
+            $("#download-document-Label").html("Document sent");
+            $("#download_document_form").hide();
+            $("#download_document_successnotif").show();
+        }
+    }
+    function resetDownloadDocumentForm()
+    {
+        $("#download_document_name").val("");
+        $("#download_document_email").val("");
+        $("#download_document_click_location").val("");
+    }
+    function submitDownloadDocumentForm()
+    {
+        var download_document_name=$("#download_document_name").val();
+        var download_document_email=$("#download_document_email").val();
+        var download_document_click=$("#download_document_click_location").val();
+        var isvalid=true;
+
+        if(download_document_name=='' || download_document_email=='')
+        {
+            //show errors
+            $("#sp_download_document_error_fields").html("<i>Please fill compulsory fields!</i><br>");
+            isvalid=false;
+        }
+        else{
+            $("#sp_download_document_error_fields").html("");
+        }
+        if(IsValidEmail(download_document_email)==false){
+            document.getElementById("sp_download_document_error_email").innerHTML = "<i>Please enter a valid email!</i>";
+            isvalid = false;
+        }
+        else{
+            $("#sp_download_document_error_email").html("");
+        }
+
+        $("#download_document_result_name").html(download_document_name);
+        $("#download_document_result_email").html(download_document_email);
+
+        if(isvalid){
+            $("#download_document_submt_btn").html("Sending...");
+            $("#download_document_submt_btn").attr("class","rfd-btn-green");
+            $.ajax({
+                url:'execute.php?action=get_document',
+                data:{
+                    download_document_name:download_document_name,
+                    download_document_email:download_document_email
+                },
+                type:'POST',
+                async:false,
+                success:function(data){
+                    //console.log(data);
+                    $("#download_document_submt_btn").html("Sent");
+                    resetDownloadDocumentForm();
+                    toggleDownloadDocumentForm("notif");
+                }
+            });
+        }
+        return false; //to avoid form submission
+    }
+</script>
+<div id="download-document-popup" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="download-document-Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="download-document-Label">Enter details to receive the document via email</h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <form name="download_document" method="POST" action="javascript:void(0);" onsubmit="event.preventDefault();return submitDownloadDocumentForm();">
+                        <div id="download_document_form">
+                            <div class="col-md-12 ryp-row-wrap">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-8">
+                                    <div class="rfd-head">Download Now</div>
+                                    <span id="sp_download_document_error_fields" style="color:red"></span>
+                                    <span id="sp_download_document_error_email" style="color:red"></span>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="col-md-12 ryp-row-wrap">
+                                <div class="col-md-4">
+                                    <label class="ryp-label">Full Name <span style="color:red">*</span></label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" class="ryp-input" name="download_document_name" id="download_document_name" />
+                                    <input type="hidden" name="download_document_click_location" id="download_document_click_location" value="" />
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="col-md-12 ryp-row-wrap">
+                                <div class="col-md-4">
+                                    <label class="ryp-label">Email <span style="color:red">*</span></label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" class="ryp-input" name="download_document_email" id="download_document_email" />
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="col-md-12 ryp-row-wrap">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-8">
+                                    <button name="download_document_submt_btn" id="download_document_submt_btn" type="submit" class="rfd-btn-red">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="download_document_successnotif" style="display:none">
+                        <div class="col-md-12 ryp-row-wrap">
+                            <div class="col-md-8">
+                                <p style="font-family:tahoma; font-size:14px; padding:10px 0px 15px 15px; margin:0px;"> Hi <span id="download_document_result_name"></span>,<br /><br /> An email has been sent to you at <span id="download_plan_result_email"></span> with a link to download the document. It contains features and reports from all the modules, so you won't have to download it again.<br /><br /> Thank you for choosing to download.</p>
+
+                                <p style="font-family:tahoma; font-size:14px; padding:10px 0px 15px 15px; margin:0px;">
+                                    <strong>
+                                        Your
+                                        enquiry
+                                    </strong> is assigned to <strong>Rohit (Solution Architect)</strong> he will contact you, alternatively you could reach him on the contact details given
+                                    below.
+                                </p>
+                                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td width="9%" align="center" valign="top"
+                                            style="font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#093; font-weight:normal; padding:10px 10px 0px 10px; margin:0px;">
+                                            <img src="https://www.dquip.com/resources/images-common/question-icon.jpg" width="32"
+                                                 alt="Questions" />
+                                        </td>
+                                        <td width="91%"
+                                            style="font-family:tahoma; font-size:16px; color:#3781c0; font-weight:bold; padding:10px 10px 0px 0px; margin:0px;">
+                                            If any questions / concerns contact
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="padding:0px; margin:0px;">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td style="font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#093; font-weight:normal; padding:10px 5px 0px 10px; margin:0px;">
+                                                        &nbsp;
+                                                    </td>
+                                                    <td style="font-family:tahoma; font-size:14px; padding:5px 0px 0px 0px; margin:0px;">
+                                                        Rohit (Solution Architect)
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="9%"
+                                                        style="font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#093; font-weight:normal; padding:10px 5px 0px 10px; margin:0px;">
+                                                        <img src="https://www.dquip.com/resources/images-common/email-icon.jpg"
+                                                             alt="Email us at" />
+                                                    </td>
+                                                    <td width="91%"
+                                                        style="font-family:tahoma; font-size:14px; padding:5px 0px 0px 0px; margin:0px;">
+                                                        sales@dquip.com
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td valign="top"
+                                                        style="font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#093; font-weight:normal; padding:10px 5px 0px 10px; margin:0px;">
+                                                        <img src="https://www.dquip.com/resources/images-common/phone-icon.jpg"
+                                                             alt="Call us on" />
+                                                    </td>
+                                                    <td style="font-family:tahoma; font-size:14px; padding:15px 0px 0px 0px; margin:0px;">
+                                                        (+91) 92 0909 6844 / 6855 <br />
+
+                                                        <p style="font-family:tahoma; font-size:12px; padding:6px 0px 0px 0px; margin:0px; color: #808080; font-style:italic;">
+                                                            (Timing : 10am to 1pm &amp; 2pm to 6pm, Mon to Fri)
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"
+                                            style="font-family:tahoma; font-size:14px; color:#3b9cd0; font-weight:bold; padding:20px 10px 0px 10px; margin:0px;">
+                                            Your satisfaction is important to us.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!--div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Confirm</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Modify</button>
+            </div-->
+        </div>
+    </div>
+</div><div class="modal fade" id="videoModal1" tabindex="-1" role="dialog" aria-labelledby="videoModal1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div>
+                    <iframe width="100%" height="540px" src=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="modal fade" id="videoModal2" tabindex="-1" role="dialog" aria-labelledby="videoModal2" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"><center>Dquip - Leads module</center></h4>
+            </div>
+            <div class="modal-body">
+
+                <div>
+                    <iframe width="100%" height="540px" src="https://www.youtube.com/embed/fwjt0Q_0dko"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="videoModal3" tabindex="-1" role="dialog" aria-labelledby="videoModal3" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"><center>Dquip - Quotation module</center></h4>
+            </div>
+            <div class="modal-body">
+
+                <div>
+                    <iframe width="100%" height="540px" src=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="videoModal4" tabindex="-1" role="dialog" aria-labelledby="videoModal4" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"><center>Dquip - Client module</center></h4>
+            </div>
+            <div class="modal-body">
+
+                <div>
+                    <iframe width="100%" height="540px" src=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="videoModal5" tabindex="-1" role="dialog" aria-labelledby="videoModal5" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"><center>Dquip - Contacts module</center></h4>
+            </div>
+            <div class="modal-body">
+
+                <div>
+                    <iframe width="100%" height="540px" src=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="videoModal6" tabindex="-1" role="dialog" aria-labelledby="videoModal6" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"><center>Dquip - Call, Email, Meeting module</center></h4>
+            </div>
+            <div class="modal-body">
+
+                <div>
+                    <iframe width="100%" height="540px" src=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

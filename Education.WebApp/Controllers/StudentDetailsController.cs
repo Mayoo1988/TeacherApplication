@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using Education.Core.Students;
 namespace Education.WebApp.Controllers
 {
     public class StudentDetailsController : Controller
     {
+       
+
         // GET: StudentDetails
         public ActionResult Index()
         {

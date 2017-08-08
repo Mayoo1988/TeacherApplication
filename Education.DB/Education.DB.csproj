@@ -51,143 +51,141 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EducationModel.Context.cs">
+    <Compile Include="EducationDBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EducationModel.Context.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="EducationModel.cs">
+    <Compile Include="EducationDBModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="EducationModel.Designer.cs">
+    <Compile Include="EducationDBModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EducationModel.edmx</DependentUpon>
+      <DependentUpon>EducationDBModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TBL_GN_ANNAUNCMENT.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_GN_DIGITALDOC_DETAILS.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_GN_DIGITALDOC_VIEWDETAILS.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_MASTER_BOARDS.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_MASTER_CITY.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_MASTER_CLASS.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_MASTER_COUNTRY.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_MASTER_COURSE.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_MASTER_DIGITALDOC.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_MASTER_DOCUMENTTYPE.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_MASTER_STATE.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_MASTER_STATUS.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_MASTER_SUBJECT.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_MASTER_TESTQUESTIONTYPE.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_MASTER_USERTYPE.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_TEST_ANSWERS.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_TEST_ATAMPT.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_TEST_ATAMPT_QUESTION_ANSWER.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_TEST_QUESTIONS.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_TEST_TESTDETAIL.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_USER_ADDRESS_DETAILS.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_USER_COURSE_DETAILS.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_USER_DETAILS.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_USER_DOCUMENTS_DETAILS.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_USER_INSTITUTION_DETAILS.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_USER_LOGIN.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_USER_LOGIN_TRAIL.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_USER_PARENTS_DETAILS.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_USER_PROFESSIONAL_DETAILS.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_USER_ROLE.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_USER_SUBJECTS.cs">
-      <DependentUpon>EducationModel.tt</DependentUpon>
+      <DependentUpon>EducationDBModel.tt</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="EducationModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EducationModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <None Include="EducationModel.edmx.diagram">
-      <DependentUpon>EducationModel.edmx</DependentUpon>
+    <EntityDeploy Include="EducationDBModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EducationDBModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EducationDBModel.edmx.diagram">
+      <DependentUpon>EducationDBModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EducationModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EducationModel.edmx</DependentUpon>
-      <LastGenOutput>EducationModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="EducationModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EducationModel.edmx</DependentUpon>
-      <LastGenOutput>EducationModel.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="EducationDBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EducationDBModel.edmx</DependentUpon>
+      <LastGenOutput>EducationDBModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EducationDBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EducationDBModel.edmx</DependentUpon>
+      <LastGenOutput>EducationDBModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

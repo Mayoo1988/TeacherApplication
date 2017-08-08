@@ -1,0 +1,466 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Basic Page Needs Start -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>CRM - Welcome</title>
+    <!-- Basic Page Needs End -->
+    <!-- Favicons Start -->
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="images/apple-touch-icon-57x57.png" rel="apple-touch-icon" type="image/png">
+    <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" type="image/png">
+    <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" type="image/png">
+    <!-- Favicons End -->
+    <!-- CSS Start -->
+    <link href="css/css.php" rel="stylesheet" type="text/css">
+    <!--[if !IE]><!-->
+    <link href="css/ie.css" rel="stylesheet" type="text/css">
+    <!--<![endif]-->
+    <!-- CSS End -->
+    <!-- Reports CSS Start -->
+    <link href="css/jPushMenu.css" rel="stylesheet" type="text/css">
+    <link href="js/chartist/chartist.css" rel="stylesheet" type="text/css">
+    <!-- Reports CSS End -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+    <script type="text/javascript" src="js/respond.min.js"></script>
+    <![endif]-->
+    <script src="~/scripts/jquery-1.10.2.min.js"></script>
+
+    <script src="~/scripts/jquery.validate.min.js"></script>
+    <script src="~/scripts/jquery.validate.unobtrusive.min.js"></script>
+    <style>
+        #msg {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #CECECE;
+            text-align: center;
+        }
+    </style>
+
+    @if (TempData["AlertMessage"] != null)
+    {
+        <script>
+            window.alert(@TempData["AlertMessage"]);
+        </script>
+    }
+
+
+    <!--eoc for navigate message-->
+    <!--script to fetch report-->
+    <script type="text/javascript">
+
+
+        function display(url) {
+
+            /*iframe code
+                    var report='';
+                    //add loading image html
+
+                    report='<div class="ajax-loader" id="loader" style="background-image:url(../../images/help-reports-preloader.GIF); background-position:bottom; background-repeat:no-repeat; width:220px; height:120px; text-align:center;font-family:Tahoma, Geneva, sans-serif; font-size:13px; color:#006699; margin:100px auto;">Fetching data please wait...</div>';
+
+                    //add iframe html
+                    report+= '<iframe class="iframetab" style="height:1000px;width:100%;border:0;display:block;overflow:auto;background-color:#fff!important;padding:0;margin:0;" src="'+url+'" onload="javascript:hide_loader();"></iframe>';
+                    //console.log(report);
+
+                    $("#msg").html("");
+
+                    $("#reportdiv").html(report);
+                    */
+            /*div code*/
+            var divcontainer = $('#reportdiv');
+            $("#msg").hide();
+            divcontainer.show();
+            divcontainer.empty();
+            divcontainer.html('<div class="ajax-loader" id="loader" style="background-image:url(images/help-reports-preloader.GIF); background-position:bottom; background-repeat:no-repeat; width:220px; height:120px; text-align:center;font-family:Tahoma, Geneva, sans-serif; font-size:13px; color:#006699; margin:100px auto;">Fetching data please wait...</div>');
+            var fetch_url = '';
+            divcontainer.load(url, function () {
+                console.log("on complete calllback");
+                console.log("on complete calllback ends");
+            });
+            /*eoc div code*/
+
+            $('.jPushMenuBtn,body,.cbp-spmenu').removeClass('disabled active cbp-spmenu-open cbp-spmenu-push-toleft cbp-spmenu-push-toright');
+
+        }
+        function showDashboard() {
+            $('#reportdiv').hide();
+            $('#msg').show();
+        }
+
+        function hide_loader() //called to hide loading image
+        {
+            //document.getElementById('loader').style.display='none';
+            $(".ajax-loader").css("display", "none");
+        }
+    </script>
+    <!--script to fetch report-->
+    <!--eoc by kartik-->
+</head>
+
+<body>
+    <div class="button-toggle-menu"><button class="toggle-menu menu-left btn btn-warning">&#9776; Reports Menu</button></div>
+    <div id="container">
+        <header id="header">
+            <div class="container full-width-container">
+                <div class="col-md-4 col-sm-3 col-xs-2">
+                    <div class="home-icon hidden-xs">
+                        <a href="dashboard.php"><span class="glyphicon glyphicon-home"></span></a>
+                    </div>
+
+                    <div class="fav-drop">
+                        <a href="javascript:void(0);" data-toggle="dropdown"><span class="glyphicon glyphicon-star"></span></a>
+                        <div class="dropdown-menu fav-menu">
+                            <div class="fav-menu-arrow"></div>
+                            <div id="fav-menu-scroll" class="fav-menu-scroll">
+                                <div class="fav-none-icon"><span class="glyphicon glyphicon-star"></span></div>
+                                <p class="fav-none-text">10 top menus used by you would be listed here for quick navigation!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 center col-sm-6 col-xs-7 mobile-reset-padding">
+                    <ul class="nav tabs-dashmenu">
+                        <li class="active menu-dashboard">
+                            <a id="menu-link" href="#tab_default_1" data-toggle="tab">
+                                Menu
+                            </a>
+                        </li>
+                        <li class="menu-dashboard">
+                            <a id="dashboard-link" href="#tab_default_2" data-toggle="tab" class="reports-tab-show">
+                                Reports
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-sm-3 col-xs-3">
+                    <div class="settings-icon">
+                        <a href="javascript:void(0);" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span></a>
+                        <ul class="dropdown-menu header-menu">
+                            <li class="header-menu-arrow"></li>
+                            <li>
+                                <!--div class="header-help left"><a href="modules/help/help.php?currentMod=help"><span class="glyphicon glyphicon-question-sign"></span> &nbsp;Help</a></div-->
+                                <div class="header-so right"><a href="execute.php?action=logout"><span class="glyphicon glyphicon-off"></span> &nbsp;Sign Out</a></div>
+                                <div class="clear"></div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div class="header-menu-lft">
+                                    <div class="profile-pic"><img src="images/photo-large-unknown-user.jpg" alt="Profile Pic"></div>
+                                    <div class="profile-name center">Your Name</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="header-menu-rgt">
+                                    <ul class="header-rgt-menu">
+                                        <li><a href="modules/users/user-permissions.php?currentMod=users"><span class="glyphicon glyphicon-user"></span> &nbsp;Profile</a></li>
+                                        <li><a href="modules/users/user-permissions.php?currentMod=users"><span class="glyphicon glyphicon-cog"></span> &nbsp;Account Settings</a></li>
+                                        <li><a href="modules/users/user-permissions.php?currentMod=users"><span class="glyphicon glyphicon-lock"></span> &nbsp;Change Password</a></li>
+                                        <li><a href="javascript:void(0);"><span class="glyphicon glyphicon-picture"></span> &nbsp;Change Theme</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="clear"></li>
+                        </ul>
+                    </div>
+
+                    <div class="badges-icon">
+                        <div class="notification-collapse"><a href="javascript:void(0);" id="notification-slider-link" data-toggle="modal" data-target="#notifications"><span class="badge badge-red">4</span></a></div>
+                    </div>
+
+                    <!--div class="search-icon">
+                      <div class="search-collapse"><a href="javascript:void(0);"><span class="glyphicon glyphicon-search"></span></a></div>
+                    </div>
+                    <div class="search-open">
+                    </div-->
+                </div>
+            </div>
+        </header>
+        @RenderBody()
+        <footer id="footer">
+            <!--div id="support-open" class="container"-->
+            <script type="text/javascript" src="js/validation.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $("#enquiry_name").val("");
+                    $("#enquiry_company").val("");
+                    $("#enquiry_email").val("");
+                    $("#enquiry_mob").val("");
+                    $("#enquiry_query").val("");
+                    //$("#click_location").val("");
+
+                });
+                function submit_popup() {
+                    var enquiry_name = $("#enquiry_name").val();
+                    var enquiry_company = $("#enquiry_company").val();
+                    var enquiry_email = $("#enquiry_email").val();
+                    var enquiry_mob = $("#enquiry_mob").val();
+                    var enquiry_query = $("#enquiry_query").val();
+                    var enquiry_click = "";//$("#click_location").val();
+                    var isvalid = true;
+
+                    if (enquiry_name == '' || enquiry_company == '' || enquiry_email == '') {
+                        //show errors
+                        $("#sp_error_fields").html("<i>Please fill compulsory fields!</i><br>");
+                        isvalid = false;
+                    }
+                    else {
+                        $("#sp_error_fields").html("");
+                    }
+                    if (IsNumeric(enquiry_mob) == false) {
+                        document.getElementById("sp_error_mob").innerHTML = "<i>Invalid mobile number!</i><br>";
+                        isvalid = false;
+                    }
+                    else {
+                        if ((enquiry_mob.length > 10 || enquiry_mob.length < 10) && enquiry_mob.length != 0) { //allow blank
+                            document.getElementById("sp_error_mob").innerHTML = "<i>Please enter a valid Mobile number!</i><br>";
+                            isvalid = false;
+                        }
+                        else {
+                            $("#sp_error_mob").html("");
+                        }
+                    }
+                    if (IsValidEmail(enquiry_email) == false) {
+                        document.getElementById("sp_error_email").innerHTML = "<i>Please enter a valid email!</i>";
+                        isvalid = false;
+                    }
+                    else {
+                        $("#sp_error_email").html("");
+                    }
+
+                    $("#enquiry_result_name").html(enquiry_name);
+
+                    if (isvalid) {
+                        $("#enquiry_submt_btn").html("Sending...");
+                        $("#enquiry_submt_btn").attr("class", "rfd-btn-green");
+                        $.ajax({
+                            url: 'execute.php?action=send_enquiry',
+                            data: {
+                                en_name: enquiry_name,
+                                en_company: enquiry_company,
+                                en_email: enquiry_email,
+                                en_mobile: enquiry_mob,
+                                en_query: enquiry_query,
+                                en_click: enquiry_click
+                            },
+                            type: 'POST',
+                            async: false,
+                            success: function (data) {
+                                //console.log(data);
+                                $("#enquiry_submt_btn").html("Sent");
+                                $("#enquiry_name").val("");
+                                $("#enquiry_company").val("");
+                                $("#enquiry_email").val("");
+                                $("#enquiry_mob").val("");
+                                $("#enquiry_query").val("");
+                                //$("#click_location").val("");
+                                $("#enquiryform").hide();
+                                $("#successnotif").show();
+                            }
+                        });
+                    }
+                    return false; //to avoid form submission
+                }
+            </script>
+            <div id="enquire-now-popup" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Get answers to all your sales questions.</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <form name="general_enquiry" method="POST" action="javascript:void(0);" onsubmit="event.preventDefault();return submit_popup();">
+                                    <div id="enquiryform">
+                                        <div class="col-md-12 ryp-row-wrap">
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-8">
+                                                <div class="rfd-head">Submit your sales enquiry</div>
+                                                <span id="sp_error_fields" style="color:red"></span>
+                                                <span id="sp_error_mob" style="color:red"></span>
+                                                <span id="sp_error_email" style="color:red"></span>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div class="col-md-12 ryp-row-wrap">
+                                            <div class="col-md-4">
+                                                <label class="ryp-label">Full Name <span style="color:red">*</span></label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="ryp-input" name="enquiry_name" id="enquiry_name" />
+                                                <input type="hidden" name="click_location" id="click_location" value="" />
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="col-md-12 ryp-row-wrap">
+                                            <div class="col-md-4">
+                                                <label class="ryp-label">Company Name <span style="color:red">*</span></label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="ryp-input" name="enquiry_company" id="enquiry_company" />
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="col-md-12 ryp-row-wrap">
+                                            <div class="col-md-4">
+                                                <label class="ryp-label">Email <span style="color:red">*</span></label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="ryp-input" name="enquiry_email" id="enquiry_email" />
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="col-md-12 ryp-row-wrap">
+                                            <div class="col-md-4">
+                                                <label class="ryp-label">Mobile</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="ryp-input" name="enquiry_mob" id="enquiry_mob" />
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="col-md-12 ryp-row-wrap">
+                                            <div class="col-md-4">
+                                                <label class="ryp-label">Query</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <textarea class="ryp-input" name="enquiry_query" id="enquiry_query"></textarea>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="col-md-12 ryp-row-wrap">
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-8">
+                                                <br>
+                                                <button name="enquiry_submt_btn" id="enquiry_submt_btn" type="submit" class="rfd-btn-red">Submit</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+                                <div id="successnotif" style="display:none">
+                                    <div class="col-md-12 ryp-row-wrap">
+                                        <div class="col-md-8">
+                                            <p style="font-family:tahoma; font-size:14px; padding:10px 0px 15px 15px; margin:0px; text-align:left;"> Hi <span id="enquiry_result_name"></span>,<br /><br /> Thank you for your enquiry. </p>
+
+                                            <p style="font-family:tahoma; font-size:14px; padding:10px 0px 15px 15px; margin:0px; text-align:left;">
+                                                <strong>
+                                                    Your
+                                                    enquiry
+                                                </strong> is assigned to <strong>Rohit (Solution Architect)</strong> he will contact you, alternatively you could reach him on the contact details given
+                                                below.
+                                            </p>
+                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td width="9%" align="center" valign="top"
+                                                        style="font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#093; font-weight:normal; padding:10px 10px 0px 10px; margin:0px;">
+                                                        <img src="https://www.dquip.com/resources/images-common/question-icon.jpg" width="32"
+                                                             alt="Questions" />
+                                                    </td>
+                                                    <td width="91%"
+                                                        style="font-family:tahoma; font-size:16px; color:#3781c0; font-weight:bold; padding:10px 10px 0px 0px; margin:0px; text-align:left;">
+                                                        If any questions / concerns contact
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" style="padding:0px; margin:0px;">
+                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td style="font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#093; font-weight:normal; padding:10px 5px 0px 10px; margin:0px;">
+                                                                    &nbsp;
+                                                                </td>
+                                                                <td style="font-family:tahoma; font-size:14px; padding:5px 0px 0px 0px; margin:0px;">
+                                                                    Rohit (Solution Architect)
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="9%"
+                                                                    style="font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#093; font-weight:normal; padding:10px 5px 0px 10px; margin:0px;">
+                                                                    <img src="https://www.dquip.com/resources/images-common/email-icon.jpg"
+                                                                         alt="Email us at" />
+                                                                </td>
+                                                                <td width="91%"
+                                                                    style="font-family:tahoma; font-size:14px; padding:5px 0px 0px 0px; margin:0px;">
+                                                                    sales@dquip.com
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td valign="top"
+                                                                    style="font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#093; font-weight:normal; padding:10px 5px 0px 10px; margin:0px;">
+                                                                    <img src="https://www.dquip.com/resources/images-common/phone-icon.jpg"
+                                                                         alt="Call us on" />
+                                                                </td>
+                                                                <td style="font-family:tahoma; font-size:14px; padding:15px 0px 0px 0px; margin:0px;">
+                                                                    (+91) 92 0909 6844 / 6855 <br />
+
+                                                                    <p style="font-family:tahoma; font-size:12px; padding:6px 0px 0px 0px; margin:0px; color: #808080; font-style:italic; text-align:left;">
+                                                                        (Timing : 10am to 1pm &amp; 2pm to 6pm, Mon to Fri)
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"
+                                                        style="font-family:tahoma; font-size:14px; color:#3b9cd0; font-weight:bold; padding:20px 10px 0px 10px; margin:0px;">
+                                                        Your satisfaction is important to us.
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <!--div class="modal-footer">
+                          <button type="submit" class="btn btn-primary">Confirm</button>
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Modify</button>
+                        </div-->
+                    </div>
+                </div>
+            </div>    <!--p><a href="javascript:void(0);" id="support-collapse">Help &amp; Support</a></p-->
+            <p>This is a mock of the software. Data &amp; Modules are for representation purpose only.</p>
+            <p><a href="https://www.dquip.com/terms-of-use.php" target="_blank">Terms of Use</a> &nbsp; | &nbsp; <a href="https://www.dquip.com/privacy-policy.php " target="_blank">Privacy Policy</a></p>
+            <p>Copyright &copy; 2014 Dquip. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/dashboard-temp.php"></script>
+
+    <script type="text/javascript">
+        $('#menu-link').click(function () {
+            $('.button-toggle-menu').css("display", "none");
+            $('#home-container').removeClass('main-mobile');
+            $('#videos').show();
+        });
+        $('#dashboard-link').click(function () {
+            $('.button-toggle-menu').css("display", "block");
+            $('#home-container').addClass('main-mobile');
+            $('#videos').hide();
+        });
+    </script>
+
+    <!-- Left Menu Plugin JavaScript -->
+    <!--script src='http://cdnjs.cloudflare.com/ajax/libs/velocity/0.2.1/jquery.velocity.min.js'></script-->
+    <!--[if IE]>
+    <script type="text/javascript" src="js/placeholder.js"></script>
+    <![endif]-->
+    <!-- JS End -->
+</body>
+</html>

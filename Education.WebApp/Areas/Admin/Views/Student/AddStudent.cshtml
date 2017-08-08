@@ -1,0 +1,182 @@
+﻿@model Education.WebApp.Areas.Admin.Models.Students.StudentDetail
+
+<script>
+
+    $(document).ready(
+    function () {
+        $('#drpCountry').change(function () {
+            var countryID = $(this).val();
+            if (countryID != null && countryID != '') {
+                $('#drpState').empty();
+
+                $.ajax({
+                    type: "POST",
+                    url: "CountryStateCity/GetState",
+                    async: true,
+                    data: { "CountryID": countryID },
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+
+                        $.each(state, function () {
+                            $("#drpState").append($("<option></option>").val(this['StateID']).html(this['StateName']));
+                        });
+                    }
+                });
+            }
+        });
+
+        $('#drpState').change(function () {
+            var StateID = $(this).val();
+            if (StateID != null && StateID != '') {
+                $('#drpCity').empty();
+
+                $.ajax({
+                    type: "POST",
+                    url: "CountryStateCity/GetCity",
+                    async: true,
+                    data: { "StateID": StateID },
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+
+                        $.each(state, function () {
+                            $("#drpCity").append($("<option></option>").val(this['CityID']).html(this['CityName']));
+                        });
+                    }
+                });
+            }
+        });
+    }
+    );
+    $('#drpCountry').trigger("change");
+
+</script>
+@Html.BeginForm()
+{
+<h1>Student Details</h1>
+
+<br />
+
+<br />
+@Html.ValidationSummary();
+<table>
+    <tr>
+
+        <td style="width:100px">@Html.TextBoxFor(m => m.FIRSTNAME, new { placeholder = "First Name" })</td>
+        <td style="width:100px">@Html.TextBoxFor(m => m.MIDDLENAME, new { placeholder = "Middle Name" })</td>
+        <td style="width:100px">@Html.TextBoxFor(m => m.LASTNAME, new { placeholder = "Last Name" })</td>
+    </tr>
+    <tr>
+
+        <td>@Html.ValidationMessageFor(m => m.FIRSTNAME)</td>
+        <td></td>
+        <td>@Html.ValidationMessageFor(m => m.LASTNAME)</td>
+    </tr>
+    <tr>
+
+        <td>Gender</td>
+        <td>@Html.RadioButtonFor(m => m.Gender, "Male", new { @checked = true })</td>
+        <td>@Html.RadioButtonFor(m => m.Gender, "Female", new { @checked = false })</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="2">@Html.ValidationMessageFor(m => m.Gender)</td>
+
+
+    </tr>
+    <tr>
+
+        <td colspan="3">@Html.TextBoxFor(m => m.NATIONALITY, new { placeholder = "Nationality" })</td>
+
+    </tr>
+    <tr>
+
+        <td colspan="3">@Html.ValidationMessageFor(m => m.NATIONALITY)</td>
+
+
+    </tr>
+    <tr>
+
+        <td colspan="3">@Html.TextBoxFor(m => m.MOBILENO, new { placeholder = "Mobile No" })</td>
+
+    </tr>
+    <tr>
+        <td colspan="3">@Html.ValidationMessageFor(m => m.MOBILENO)</td>
+    </tr>
+    <tr>
+
+        <td colspan="3">@Html.TextBoxFor(m => m.EMAILID, new { placeholder = "Email ID" })</td>
+
+    </tr>
+    <tr>
+
+        <td colspan="3">@Html.ValidationMessageFor(m => m.EMAILID)</td>
+    </tr>
+    <tr>
+        <td>Date of Birth</td>
+        <td colspan="2">@Html.TextBoxFor(m => m.DOB, new { placeholder = "DD/MM/YYYY" })</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="2">@Html.ValidationMessageFor(m => m.DOB)</td>
+    </tr>
+
+    <tr>
+        <td>Select Address Type</td>
+        <td colspan="2">
+            <select name="AddressType">
+                <option value="1" selected="selected">Permanent</option>
+                <option value="2">Correspondance</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+
+        <td colspan="3">@Html.TextBoxFor(m => m.AddressLine1, new { placeholder = "Address Line1" })</td>
+
+    </tr>
+    <tr>
+
+        <td colspan="3">@Html.ValidationMessageFor(m => m.AddressLine1)</td>
+    </tr>
+    <tr>
+
+        <td colspan="3">@Html.TextBoxFor(m => m.AddressLine2, new { placeholder = "Address Line2" })</td>
+
+    </tr>
+    <tr>
+        <td>Country</td>
+        <td>State</td>
+        <td>City</td>
+    </tr>
+    <tr>
+
+        <td>@Html.DropDownListFor(m => m.Country, Model.CountrtList, new { id = "drpCountry" })</td>
+        <td>@Html.DropDownListFor(m => m.State, Model.StateList, new { id = "drpState" })</td>
+        <td>@Html.DropDownListFor(m => m.City, Model.CityList, new { id = "drpCity" })</td>
+    </tr>
+    <tr>
+
+        <td>@Html.ValidationMessageFor(m => m.Country)</td>
+        <td>@Html.ValidationMessageFor(m => m.State)</td>
+        <td>@Html.ValidationMessageFor(m => m.City)</td>
+    </tr>
+    <tr>
+
+        <td colspan="3">@Html.TextBoxFor(m => m.Pincode, new { placeholder = "Pincode" })</td>
+
+    </tr>
+    <tr>
+
+        <td colspan="3">@Html.ValidationMessageFor(m => m.Pincode)</td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <input type="submit" value="Save" />
+        </td>
+    </tr>
+</table>
+
+
+}

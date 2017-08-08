@@ -11,10 +11,10 @@ namespace Education.WebApp.Controllers
     {
         public IUserReposetory _UserReporsetory;
 
-        public UserController()
-        {
-           // _UserReporsetory = _repo;
-        }
+        //public UserController()
+        //{
+        //   // _UserReporsetory = _repo;
+        //}
         public UserController(IUserReposetory _repo)
         {
             _UserReporsetory = _repo;

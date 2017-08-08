@@ -35,7 +35,7 @@ namespace Education.WebApp.Areas.Admin.Models.Students
                     {
                         Text = Curyear.ToString(),
                         Value = Curyear.ToString()
-                    })
+                    });
 
                 }
                 return itemlist;

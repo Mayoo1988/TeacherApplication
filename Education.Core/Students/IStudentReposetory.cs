@@ -16,6 +16,7 @@ namespace Education.Core.Students
         bool DeleteInstitute(long InstituteID);
         List<Boards> GetBoards();
         List<Classes> GetClasses();
+        List<Documents> GetDocuments(long UserID);
         
       }
 }

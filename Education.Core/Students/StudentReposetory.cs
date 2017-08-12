@@ -141,5 +141,58 @@ namespace Education.Core.Students
             }
             return Restul;
         }
+
+        public List<Documents> GetDocuments(long UserID)
+        {
+            return dbEntities.TBL_USER_DOCUMENTS_DETAILS.Where(X => X.USERID == UserID).Select(X =>
+            new Documents()
+            {
+                CREATEDBY = X.CREATEDBY,
+                CREATEDDATE = X.CREATEDDATE,
+                DOCUMENTNAME = X.DOCUMENTNAME,
+                DOCUMENTTYPEID = X.DOCUMENTTYPEID,
+                DOCUMENTTYPENAME = X.TBL_MASTER_DOCUMENTTYPE.DocumentTypeName,
+                MODIFIEDBY = X.MODIFIEDBY,
+                MODIFIEDDATE = X.MODIFIEDDATE,
+                STATUS = X.STATUS,
+                USERDOCUMENTID = X.USERDOCUMENTID,
+                USERID = X.USERID
+
+            }
+
+                ).ToList();
+        }
+
+        public bool DeleteDocument(long DocumentID)
+        {
+            bool Restul = false;
+            TBL_USER_DOCUMENTS_DETAILS documentdetail = dbEntities.TBL_USER_DOCUMENTS_DETAILS.Where(x => x.USERDOCUMENTID == DocumentID).SingleOrDefault();
+            if (documentdetail != null)
+            {
+                dbEntities.TBL_USER_DOCUMENTS_DETAILS.Remove(documentdetail);
+                dbEntities.SaveChanges();
+                Restul = true;
+            }
+            return Restul;
+        }
+        public Documents AddDocuments(Documents document)
+        {
+            TBL_USER_DOCUMENTS_DETAILS DocumentsDetails = new TBL_USER_DOCUMENTS_DETAILS();
+            DocumentsDetails.CREATEDBY = document.CREATEDBY;
+               DocumentsDetails.CREATEDDATE = document.CREATEDDATE;
+                DocumentsDetails.DOCUMENTNAME = document.DOCUMENTNAME;
+                DocumentsDetails.DOCUMENTTYPEID = document.DOCUMENTTYPEID;
+               
+                DocumentsDetails.MODIFIEDBY = document.MODIFIEDBY;
+                DocumentsDetails.MODIFIEDDATE = document.MODIFIEDDATE;
+                DocumentsDetails.STATUS = document.STATUS;
+                DocumentsDetails.USERDOCUMENTID = document.USERDOCUMENTID;
+                DocumentsDetails.USERID = document.USERID;
+
+            dbEntities.TBL_USER_DOCUMENTS_DETAILS.Add(DocumentsDetails);
+            dbEntities.SaveChanges();
+            document.USERDOCUMENTID = DocumentsDetails.USERDOCUMENTID;
+            return document;
+        }
     }
 }

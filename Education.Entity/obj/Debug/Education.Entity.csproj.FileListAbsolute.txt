@@ -13,3 +13,8 @@ C:\Users\Manu\Source\Repos\TeacherApplication\Education.Entity\obj\Debug\Educati
 C:\Users\Manu\Source\Repos\TeacherApplication\Education.Entity\obj\Debug\Education.Entity.pdb
 C:\Users\Manu\Source\Repos\TeacherApplication\Education.Entity\bin\Debug\Education.Entity.dll
 C:\Users\Manu\Source\Repos\TeacherApplication\Education.Entity\bin\Debug\Education.Entity.pdb
+C:\EducationAppLatest\Education.Entity\bin\Debug\Education.Entity.dll
+C:\EducationAppLatest\Education.Entity\bin\Debug\Education.Entity.pdb
+C:\EducationAppLatest\Education.Entity\obj\Debug\Education.Entity.csprojResolveAssemblyReference.cache
+C:\EducationAppLatest\Education.Entity\obj\Debug\Education.Entity.dll
+C:\EducationAppLatest\Education.Entity\obj\Debug\Education.Entity.pdb

@@ -38,3 +38,13 @@ C:\Users\Manu\Source\Repos\TeacherApplication\Education.DB\bin\Debug\EntityFrame
 C:\Users\Manu\Source\Repos\TeacherApplication\Education.DB\obj\Debug\Education.DB.csprojResolveAssemblyReference.cache
 C:\Users\Manu\Source\Repos\TeacherApplication\Education.DB\obj\Debug\Education.DB.dll
 C:\Users\Manu\Source\Repos\TeacherApplication\Education.DB\obj\Debug\Education.DB.pdb
+C:\EducationAppLatest\Education.DB\bin\Debug\Education.DB.dll.config
+C:\EducationAppLatest\Education.DB\bin\Debug\Education.DB.dll
+C:\EducationAppLatest\Education.DB\bin\Debug\Education.DB.pdb
+C:\EducationAppLatest\Education.DB\bin\Debug\EntityFramework.dll
+C:\EducationAppLatest\Education.DB\bin\Debug\EntityFramework.SqlServer.dll
+C:\EducationAppLatest\Education.DB\bin\Debug\EntityFramework.xml
+C:\EducationAppLatest\Education.DB\bin\Debug\EntityFramework.SqlServer.xml
+C:\EducationAppLatest\Education.DB\obj\Debug\Education.DB.csprojResolveAssemblyReference.cache
+C:\EducationAppLatest\Education.DB\obj\Debug\Education.DB.dll
+C:\EducationAppLatest\Education.DB\obj\Debug\Education.DB.pdb

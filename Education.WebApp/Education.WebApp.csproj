@@ -48,6 +48,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Education.DB\bin\Debug\Education.DB.dll</HintPath>
     </Reference>
+    <Reference Include="Excel">
+      <HintPath>..\..\EducationApp\EducationApp\EducationApp\Education.WebApp\bin\Excel.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -172,6 +175,7 @@
     <Content Include="Areas\Admin\Views\Student\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Student\AddStudent.cshtml" />
     <Content Include="Areas\Admin\Views\Student\AddInstitute.cshtml" />
+    <Content Include="Areas\Admin\Views\TestDetail\Index.cshtml" />
     <None Include="Properties\PublishProfiles\edu.pubxml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
@@ -194,9 +198,11 @@
     <Compile Include="Areas\Admin\Controllers\CountryStateCityController.cs" />
     <Compile Include="Areas\Admin\Controllers\DashBoardController.cs" />
     <Compile Include="Areas\Admin\Controllers\StudentController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TestDetailController.cs" />
     <Compile Include="Areas\Admin\Models\Students\StudentDetail.cs" />
     <Compile Include="Areas\Admin\Models\Students\StudentDocument.cs" />
     <Compile Include="Areas\Admin\Models\Students\StudentInstitutionDetails.cs" />
+    <Compile Include="Areas\Admin\Models\TestDetails\TestDetailsModel.cs" />
     <Compile Include="Areas\Students\StudentsAreaRegistration.cs" />
     <Compile Include="Areas\Teachers\TeachersAreaRegistration.cs" />
     <Compile Include="Controllers\LoginController.cs" />

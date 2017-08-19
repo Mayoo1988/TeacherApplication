@@ -176,6 +176,7 @@
     <Content Include="Areas\Admin\Views\Student\AddStudent.cshtml" />
     <Content Include="Areas\Admin\Views\Student\AddInstitute.cshtml" />
     <Content Include="Areas\Admin\Views\TestDetail\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\VideoUpload\Index.cshtml" />
     <None Include="Properties\PublishProfiles\edu.pubxml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
@@ -199,10 +200,12 @@
     <Compile Include="Areas\Admin\Controllers\DashBoardController.cs" />
     <Compile Include="Areas\Admin\Controllers\StudentController.cs" />
     <Compile Include="Areas\Admin\Controllers\TestDetailController.cs" />
+    <Compile Include="Areas\Admin\Controllers\VideoUploadController.cs" />
     <Compile Include="Areas\Admin\Models\Students\StudentDetail.cs" />
     <Compile Include="Areas\Admin\Models\Students\StudentDocument.cs" />
     <Compile Include="Areas\Admin\Models\Students\StudentInstitutionDetails.cs" />
     <Compile Include="Areas\Admin\Models\TestDetails\TestDetailsModel.cs" />
+    <Compile Include="Areas\Admin\Models\Video\VideoUploaddetails.cs" />
     <Compile Include="Areas\Students\StudentsAreaRegistration.cs" />
     <Compile Include="Areas\Teachers\TeachersAreaRegistration.cs" />
     <Compile Include="Controllers\LoginController.cs" />

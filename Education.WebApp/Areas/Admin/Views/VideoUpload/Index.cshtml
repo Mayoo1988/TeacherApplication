@@ -1,0 +1,56 @@
+﻿@*@model List<Education.WebApp.Areas.Admin.Models.Video.VideoUploaddetails>*@
+@model List<Education.Entity.Admin.VideoUploaddetails>
+
+@*@{
+    Layout = null;
+}*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+    </style>
+</head>
+<body>
+    @using (Html.BeginForm("Index", "VideoUpload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <input type="file" name="postedFile" />
+        <input type="submit" id="btnUpload" value="Upload" />
+    }
+    <hr />
+    <table cellpadding="0" cellspacing="0">
+        @if (Model.Count() > 0)
+        {
+            foreach (var file in Model)
+            {
+                <tr>
+                    <td>
+                        <u>
+                            @file.DOCUMENTNAME
+                        </u>
+                        <hr />
+                        <a class="player" style="height: 300px; width: 300px; display: block" href='@Url.Action("DownloadFile", "VideoUpload", new {DIGITALDOCTYPEID = file.DIGITALDOCTYPEID})'>
+                        </a>
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+    <script src="~/FlowPlayer/flowplayer-3.2.12.min.js"></script>
+    <script type="text/javascript">
+    flowplayer("a.player", "/FlowPlayer/flowplayer-3.2.16.swf", {
+        plugins: {
+            pseudo: { url: "/FlowPlayer/flowplayer.pseudostreaming-3.2.12.swf" }
+        },
+        clip: { provider: 'pseudo', autoPlay: false},
+    });
+    </script>
+</body>
+</html>

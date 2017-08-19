@@ -43,12 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Video\IVideoUpload.cs" />
+    <Compile Include="Admin\Video\VideoUpload.cs" />
     <Compile Include="CountryStateCity\CountryStateCityReposetory.cs" />
     <Compile Include="CountryStateCity\ICountryStateCityReposetory.cs" />
     <Compile Include="Students\IStudentReposetory.cs" />
     <Compile Include="Students\StudentReposetory.cs" />
-    <Compile Include="TEST\ITestDetailsRepository.cs" />
-    <Compile Include="TEST\TestDetailsRepository.cs" />
+    <Compile Include="Admin\TEST\ITestDetailsRepository.cs" />
+    <Compile Include="Admin\TEST\TestDetailsRepository.cs" />
     <Compile Include="User\IUserReposetory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User\UserReposetory.cs" />
@@ -62,6 +64,9 @@
       <Project>{e998ea48-c4a0-446c-9db2-4d22824d8d53}</Project>
       <Name>Education.Entity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

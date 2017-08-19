@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\TestDetails.cs" />
+    <Compile Include="Admin\VideoUpload.cs" />
     <Compile Include="CountryEntity\City.cs" />
     <Compile Include="CountryEntity\Country.cs" />
     <Compile Include="CountryEntity\State.cs" />
